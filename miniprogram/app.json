@@ -1,0 +1,133 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/searchInput/search-input",
+    "pages/orderDetail/orderDetail",
+    "pages/address/address",
+    "pages/submitOrder/submitOrder",
+    "pages/addAddress/addAddress",
+    "pages/login/login",
+    "pages/editAddr/editAddr",
+    "pages/opinion/opinion",
+    "pages/customerService/customerService",
+    "pages/myOrder/myOrder",
+    "pages/seting/seting",
+    "pages/applyService/applyService",
+    "pages/invitePage/invitePage",
+    "pages/mgmtOrder/mgmtOrder",
+    "pages/mgmtOrderDetail/mgmtOrderDetail",
+    "pages/mgmtGoods/mgmtGoods",
+    "pages/mgmtGoodsInfo/mgmtGoodsInfo",
+    "pages/mgmtGold/mgmtGold",
+    "pages/goodsDetail/goodsDetail",
+    "pages/cartPage/cartPage"
+
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-icon": "vant-weapp/icon/index",
+    "van-search": "vant-weapp/search/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-tabbar": "vant-weapp/tabbar/index",
+    "van-tabbar-item": "vant-weapp/tabbar-item/index",
+    "product-card": "components/product-card/product-card",
+    "tab": "components/tab/tab",
+    "mgmt-goods": "components/mgmt-goods/mgmt-goods",
+    "line": "components/line/line",
+    "my-order-list": "components/my-order-list/my-order-list",
+    "mgmt-order-list": "components/mgmt-order-list/mgmt-order-list",
+    "login": "components/login/login",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "search-input": "components/search-input/search-input",
+    "mgmt-button": "components/mgmt-button/mgmt-button",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "goods-card": "components/goods-card/goods-card",
+    "order-button": "components/order-button/order-button",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#64ba6a",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/index-o.png",
+        "selectedIconPath": "icons/index.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "icons/all-o.png",
+        "selectedIconPath": "icons/all.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/cart-o.png",
+        "selectedIconPath": "icons/cart.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/icons/user-o.png",
+        "selectedIconPath": "icons/user.png"
+      }
+    ]
+  }
+}

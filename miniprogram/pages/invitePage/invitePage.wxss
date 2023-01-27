@@ -1,0 +1,25 @@
+page {
+  background-color: #ffffff;
+  margin: 10rpx;
+  width: 95vw;
+}
+page .code_content {
+  text-align: center;
+}
+page .active .answer {
+  text-indent: 50rpx;
+  margin: 20rpx 0;
+  margin-left: 20rpx;
+  color: #7a7f83;
+}
+page .share_button {
+  margin-top: 20rpx;
+  left: -10rpx;
+  position: relative;
+}
+page .share_button .van-button__text {
+  color: #ffffff;
+}
+page .fill{
+    height: 300rpx;
+}

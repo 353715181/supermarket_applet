@@ -1,0 +1,73 @@
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1599198925254'); /* IE9 */
+    src: url('iconfont.eot?t=1599198925254#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANsAAsAAAAAB7AAAAMeAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDDIJjATYCJAMMCwgABCAFhG0HRBu3BhHVm1XIfiTGMSnrDL+KJtrNBPGoe70n6Tu2nAIhOyXkiXEKwVbkzQGwuCluR03IqEmexO75a7lJ+4EQdg6Oma5KIA9ojplFATgroAF14z7J/kFe0H8Yu4mgIT6GAJbCVERatu7YExcDWCWATBw3ZhhuRo1pyBVcBKfioEE2E8FVa9QrYBP/fflEdXFBEdGAjV1HtxpJ07eF39bTQRgwkCLgTGcEjGOggYqAARlcae6LjsIV0VhPbJpTHQyCmsoXhnC2L3TgPzxQCIgDyI4GoKwSUfC2MGYnknoy96of0gA4gAcsAQ4AKDkJRKGis8LPs5ky5YlekHntzphdfpZ1O4LtNnrtWZGYc36mdWcgOD18LQS5Mu0qZtpB0Wvv5B/cqYiBu2+NHxTsMKbskiEj1+4UHbOrrE8F2/3Utw7bnntncu94SUjoExfXK4itGJuYc/t2O/hRbNEjca2eJpQ4Gl/76rR472b2mx5N+qVyrM5RB3N5cc4RInUEhbJRusYez189X+423m1b2t72xOR81d9PyV3Vu+Eed294UsKA//aVXaKKcyod11OXEA783vvr+7INZ5Xo0E3vefNyn4aKN6+jSyplb1+71Zz04m+yLbOkXunSxbdYeIUTrD+ToQCEoQ605Dmqp+oX/VcChe5nTB+SpeEf1zcApMz591p2hkcN3TLBRUFnzo/hdGwzPg9otHHZmB3GNAOJuu1aLBYIAfbspA+X57r5qOCSKwFFFIVA41ISabAVIYJPTXBwaQKWCrQ57pOD6WjEeEB5VkggZOUSKDJzFzRZeY002DSIkJsv4JBVNFh6S44LffijmP2JsRUcoPuD6cdISCd7kXtHtfqW0zxOfSMvxgdFmudjN4zIU2xZPqoUISAeA1yl59D7ESYeLfaSapGpyjKq+qa0H0Oy58TYCg5A9wdMP0aivWVf+Pk7qtW33NDSY30jL2Z8oCAl74C8iWOnllt5ZfmoEhECiMcAXCUjehgegal6nsVeUvSA4FSRKd2oqzhdXhre7whgAaValGgxHC79xlqvbddGWjuMm8FE9UWTJAAA') format('woff2'),
+    url('iconfont.woff?t=1599198925254') format('woff'),
+    url('iconfont.ttf?t=1599198925254') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1599198925254#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+      height: 100%;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.icon-shoucang1:before {
+    content: "\e631";
+}
+
+.icon-shoucang:before {
+    content: "\e66d";
+}
+
+.icon-receipt-address:before {
+    content: "\e673";
+}
+
+.icon-fukuantongzhi:before {
+    content: "\e60c";
+}
+
+.icon-ding_dan:before {
+    content: "\e61b";
+}
+
+.icon-yixianshi-:before {
+    content: "\e616";
+}
+
+.icon-gouwuche:before {
+    content: "\e610";
+}
+
+.icon-tuihuotuikuan_dianpu:before {
+    content: "\e773";
+}
+
+
+/*  */
+
+.icon-tui-guang:before {
+    content: "&#xe612;";
+}
+
+.icon-souhuodizhi:before {
+    content: "&#xe610;";
+}
+
+.icon-yijianfankui:before {
+    content: "&#xe633;";
+}
+
+.icon-kefu:before {
+    content: "&#xe62f;";
+}
+
+.icon-lajitong:before {
+    content: "\e639";
+  }
+  

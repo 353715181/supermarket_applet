@@ -1,0 +1,40 @@
+<view class="detail">
+    <!--    收货信息-->
+    <view class="receive_info" data-id="{{order._id}}" bind:tap="getDetail">
+        <van-cell class="send_time " title="下单时间" value="{{order.createdTime}}" size="large"/>
+        <van-cell class="send_time " title="订单状态" value="{{order.stateName}}" size="large"/>
+        <van-cell class="send_time " title="开始配送时间" value="{{order.sendTime}}" size="large"/>
+        <van-cell class="send_time " title="如遇缺货" value="{{order.outStock}}" size="large"/>
+        <van-cell class="addr_info" title="收货信息" value="{{order.receiveAddr}} {{order.receiveRoomNum}}" size="large"
+                  border="{{falses}}"/>
+        <view class="user_info">{{order.receiveName}} {{order.receivePhone}}</view>
+        <view class="line"></view>
+        <van-field model:value="{{ order.remarks }}" disabled="{{true}}" label="备注" type="textarea" autosize
+                   border="{{ false }}"/>
+    </view>
+    <!--    商品图片列表-->
+    <view class="content" data-id="{{order._id}}" bind:tap="getDetail">
+        <scroll-view class="scroll-view_H" scroll-x="true">
+            <block wx:for="{{order.goodsList}}" wx:for-item="g" wx:key="_id">
+                <view class="scroll-view-item_H">
+                    <van-image lazy-load radius="10" width="160rpx" height="160rpx" fit="contain"
+                               src="{{g.imgUrl}}"></van-image>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class="data">
+        <view class="num">共 {{order.goodsCount}} 份商品 实付</view>
+        <view class="price">¥{{order.payPrice}}</view>
+    </view>
+    <view class='line'></view>
+    <view class="button_list">
+        <mgmt-button order="{{order}}" bind:orderTaking="orderTaking" bind:sorting="sorting"
+                     bind:startDelivery="startDelivery" bind:finishDelivery="finishDelivery"
+                     bind:confirmHandle="confirmHandle" bind:cancelMgmtOrder="cancelMgmtOrder"
+        ></mgmt-button>
+        <van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true"
+                    confirm-button-color="#6cc66a" show-cancel-button></van-dialog>
+    </view>
+
+</view>

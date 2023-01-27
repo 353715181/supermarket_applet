@@ -1,0 +1,172 @@
+page {
+
+
+    .cart-content {
+        background-color: #f7f8fa;
+        text-align      : center;
+
+        .emptyCart {
+            background-color: #fefefe;
+
+            height: 100vw;
+
+            .van-image {
+                float: initial;
+                top  : 16vw;
+            }
+
+            .cart-tips {
+                position : relative;
+                top      : 100rpx;
+                color    : #888888;
+                font-size: 11pt;
+            }
+        }
+
+
+        .van-swipe-cell {
+            margin-bottom: 15rpx 0;
+
+            .van-swipe-cell__right {
+                width: 160rpx;
+            }
+
+            .goods {
+                background-color: #ffffff;
+                display         : flex;
+                height          : 200rpx;
+
+                .checkBox {
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
+                    flex           : 1;
+
+                    .van-checkbox {
+                        display: flex;
+
+                        .redioArea {
+                            height: 100rpx;
+                        }
+                    }
+
+
+                }
+
+                .goodsInfo {
+                    flex    : 8;
+                    height  : 100%;
+                    position: relative;
+
+                    .van-card {
+                        background-color: #ffffff;
+
+                        .van-card__header {
+                            height: 100%;
+                        }
+
+                        .van-card__content {
+                            display           : flex;
+                            // padding: 10rpx 0;
+                            // justify-content: center;
+                            flex-direction    : column;
+                            text-align        : left;
+                            // align-items: center;
+                            padding-left      : 30rpx;
+
+                            .van-card__desc {
+                                padding-top: 20rpx;
+                            }
+
+                            .van-card__bottom {
+                                padding-bottom: 20rpx;
+                            }
+                        }
+
+                        height: 200rpx;
+
+                        .van-stepper {
+                            height  : 100%;
+                            width   : 100%;
+                            position: relative;
+                            bottom  : 70rpx;
+
+                            // top: -40rpx;
+                            .van-stepper__minus {
+                                width           : 46rpx;
+                                height          : 46rpx;
+                                background-color: #ffffff;
+                            }
+
+                            .van-stepper__input {
+                                width : 46rpx;
+                                height: 46rpx;
+
+                            }
+
+                            .van-stepper__plus {
+                                width           : 46rpx;
+                                height          : 46rpx;
+                                background-color: #ffffff;
+
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .van-swipe-cell__right {
+            background-color: #dd4d47;
+            width           : 130rpx;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            color           : #fcf3f3;
+        }
+    }
+
+    .van-submit-bar {
+        .tip {
+            display: flex;
+
+            navigator {
+                color: blue;
+            }
+        }
+        .before{
+            height: 100rpx;
+            width: 200rpx;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+        }
+    }
+
+    .placeholder-view {
+        width : 100%;
+        height: 150rpx;
+    }
+
+    .login {
+        position  : relative;
+        top       : 320rpx;
+        display   : inline;
+        text-align: center;
+
+        .text {
+            font-size     : small;
+            color         : #999999;
+            padding-bottom: 30rpx;
+        }
+
+        .button {
+            width : 420rpx;
+            margin: 0 auto;
+        }
+    }
+}

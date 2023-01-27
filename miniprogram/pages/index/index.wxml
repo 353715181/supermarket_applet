@@ -1,0 +1,59 @@
+<!-- 搜索框 -->
+<search-input style="position:fixed;top:52px;z-index:999;"></search-input>
+        <!-- 轮播图 -->
+<view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+        <swiper-item wx:for="{{swiper}}" wx:key="_id" wx:for-item="item">
+            <van-image fit="cover" width="100%" height="100%" src="{{item.url}}" bind:click="clickBanner" data-url="{{item.navigateTo}}" />
+        </swiper-item>
+    </swiper>
+</view>
+        <!-- 分类导航 -->
+<view class="icon_line">
+    <van-row>
+        <van-col span="7" offset="1">
+            <van-icon name="logistics" size="35rpx" />
+            次日达
+        </van-col>
+        <van-col offset="1" span="8">
+            <van-icon name="balance-o" size="35rpx" />
+            首单免配送费
+        </van-col>
+        <van-col offset="2" span="4">
+            <van-icon name="certificate" size="35rpx" />
+            安心退
+        </van-col>
+    </van-row>
+</view>
+<view class="cat_grid">
+    <scroll-view class="scroll-view" scroll-x="true" enhanced="{{ true }}" show-scrollbar="{{ true }}" bindscroll="getScrollData">
+        <view class="category_area" style="width:{{category.length%2===0?category.length/2*180:category.length/2*180+160}}rpx">
+            <block wx:for="{{ category }}" wx:key="_id" wx:for-item="item">
+                <navigator url="/pages/category/category?categoryId={{item.categoryId}}" hover-class="navigator-hover" open-type="reLaunch">
+                    <view class="cagegory" >
+                        <view class="category_img">
+                            <van-image round width="130rpx" height="130rpx" fit="cover" src="{{item.imgUrl}}" />
+                        </view>
+                        <view class="grid_text">{{item.categoryName}}</view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="scroll-box">
+        <text class="scroll-bar" style="left: {{scrollleft}}"></text>
+    </view>
+</view>
+        <!-- 分隔符 -->
+<van-divider contentPosition="center" dashed="{{true}}">猜你喜欢</van-divider>
+        <!-- 商品列表 -->
+
+<view class="goodsList">
+    <block wx:for="{{goodsList}}" wx:for-item="item" wx:key="_id">
+        <product-card data-index="{{index}}" goods="{{item}}" bindbuyNumChange="handleBuyNum"></product-card>
+    </block>
+</view>
+<view class="bottomContent" wx:if="{{!isNext}}">
+    <van-divider contentPosition="center" textColor="#bcbcbc">已经到底了～</van-divider>
+</view>
+        <!-- tabber -->

@@ -1,0 +1,40 @@
+<view class="service_page">
+    <view class="auto_service">
+        <view class="title">自助服务</view>
+        <button class='auto_button' open-type='contact'>
+            <image class='btnImg' src='/icons/complain_1.png'></image>
+            <text class="text">我要投诉</text>
+        </button>
+    </view>
+    <view class="question_list">
+        <view class="title">猜你想问</view>
+        <view class="question">
+            <van-collapse value="{{ activeNames }}" bind:change="onChange">
+                <block wx:for="{{questionList}}" wx:key="_id" wx:for-item="item">
+                    <van-collapse-item title="{{item.title}} " border="{{false}}" name="{{item.num}}">
+                        <block wx:for="{{item.content}}" wx:key="question" wx:for-item="q">
+                            <view style="margin-bottom: 10rpx">Q: {{q.question}}</view>
+                            <view style="margin-bottom: 30rpx">A: {{q.answer}}</view>
+
+                        </block>
+                    </van-collapse-item>
+                </block>
+            </van-collapse>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="button-area">
+        <view class="onLine_service">
+            <van-button color="linear-gradient(to right, #67d261, #5db664)" size="large" open-type="contact" type="info">
+                在线客服
+            </van-button>
+        </view>
+        <view class="service_phone" bind:tap="onCall">
+            <view class="icon">
+                <van-icon size="40rpx" name="phone-circle" />
+            </view>
+            <text class="text">客服热线</text>
+        </view>
+        <view class="tips">温馨提示：客服工作时间9:00-17:00</view>
+    </view>
+</view>

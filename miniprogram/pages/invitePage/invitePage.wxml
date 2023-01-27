@@ -1,0 +1,22 @@
+<view class="active">
+    <view class="question">1. 果币有什么用？</view>
+    <view class="answer">在本平台消费时，果币可以直接用来抵扣</view>
+    <view class="question">2. 邀请人数在哪里看？</view>
+    <view class="answer">在【我的】页面中 已邀人数 就是您的邀请人数</view>
+    <view class="question">3. 邀请成功后有哪些礼品？</view>
+    <view class="answer">邀请满2人，可以找客服领取300个果币（可抵扣3元）。并且您邀请的用户消费后,系统会赠送一定数量的果币到您的账户</view>
+    <view class="answer">例：若邀请了100位,这100位若每月平均消费400元，那您每月大约获取4万果币,在本店消费可以抵扣400元</view>
+    <view class="question">4. 如何算邀请成功</view>
+    <view class="answer">通过扫描下面小程序码或点击下面 立即邀请微信好友 按钮,好友为第一次登陆算邀请成功</view>
+</view>
+<view class="code_content" bind:tap="getNewCode">
+    <van-image width="550rpx" show-loading="{{imgLoading}}"	 height="550rpx" fit="cover" src="{{codeImg}}" />
+    <view class="title">
+        <view>让新朋友扫一扫上面小程序码</view>
+        <view>进入后即可接收邀请</view>
+    </view>
+</view>
+<view class="share_button">
+    <van-button type="primary"  open-type="share" 	bind:tap="onShareAppMessage" round="{{true}}" size="large">立即邀请微信好友</van-button>
+</view>
+<view class="fill"></view>

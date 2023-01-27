@@ -1,0 +1,67 @@
+<block wx:if="{{isLogin}}">
+    <view class="cart">
+        <view class="cart-content">
+            <block wx:if="{{cart&&cart.length>0}}">
+                <!-- 复选框组件 -->
+                <van-checkbox-group value="{{result}}" bind:change="onCheckBok">
+                    <block wx:for="{{cart}}" wx:key="_id" wx:for-item="item">
+                        <van-swipe-cell id="swipe-cell2" right-width="{{ 65 }}" name="{{item._id}}" async-close data-index="{{index}}" bind:close="onClose">
+                            <view class="goods">
+                                <view class="checkBox" bind:tap="checkBox" data-name="{{item._id}}">
+                                    <van-checkbox name="{{item._id}}" catch:tap="noop" checked-color="#6bc175"></van-checkbox>
+                                </view>
+                                <view class="goodsInfo" bind:tap="toGoodsDetail" data-goodsId="{{item.goodsId}}">
+                                    <van-card price="{{item.price}}" desc="{{item.description}}" title="{{item.goodsName}}" thumb="{{item.imgUrl}}">
+                                        <view slot="footer">
+                                            <van-stepper value="{{ item.buyNum }}"  max="{{!item.maxBuy||item.maxBuy>item.inventory?item.inventory:item.maxBuy}}" button-size="80rpx" min="0" catch:tap="plus" catchtap="minus" bind:change="onChange" data-beforeNum="{{item.buyNum}}" data-index="{{index}}" />
+                                        </view>
+                                    </van-card>
+                                </view>
+                            </view>
+                            <view slot="right" class="van-swipe-cell__right">删除</view>
+                        </van-swipe-cell>
+                    </block>
+                </van-checkbox-group>
+            </block>
+            <block wx:else>
+                <view class="empty-content">
+                    <view class="emptyCart">
+                        <van-image width="100" height="100" src="cloud://test-9gk2a9v0ee0aa199.7465-test-9gk2a9v0ee0aa199-1304152447/购物车空了.jpg" />
+                        <view class="cart-tips">购物车还是空的</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <!-- 分隔符 -->
+        <van-divider contentPosition="center" dashed="{{true}}">猜你喜欢</van-divider>
+        <!-- 商品列表 -->
+        <van-grid column-num="2" border="{{ false }}" gutter="{{ 10 }}">
+            <van-grid-item use-slot wx:for="{{ goodsList }}" wx:for-item="item" wx:key="_id">
+                <product-card goods="{{item}}" bindbuyNumChange="handleBuyNum"></product-card>
+            </van-grid-item>
+        </van-grid>
+        <view class="bottomContent" wx:if="{{!isNext}}">
+            <van-divider contentPosition="center" textColor="#bcbcbc">已经到底了～</van-divider>
+        </view>
+        <van-dialog id="van-dialog" message="确定要删除此商品吗？" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a" show-cancel-button></van-dialog>
+    </view>
+    <view class='placeholder-view'></view>
+    <view class="submit-bar">
+        <van-submit-bar price="{{ cost }}" safe-area-inset-bottom button-text="去结算" tip="订单消费满38元或首次下单可以免费送货到家哦" bind:submit="onClickButton" disabled="{{cost===0?true:false}}" >
+            <van-radio-group value="{{ radio }}" bind:change="onAllClick">
+                <van-radio name="1" checked-color="#07c160">全选</van-radio>
+                <view class="before" bind:tap="onAllClick"></view>
+            </van-radio-group>
+        </van-submit-bar>
+    </view>
+</block>
+<block wx:else>
+    <view class="login">
+        <view class="text">您还没有登陆哦</view>
+        <view class="button">
+            <van-button color="linear-gradient(to right, #67d261, #5db664)" round size="large" open-type="getPhoneNumber" type="info" bindgetphonenumber="getPhoneNumber">
+                去登陆
+            </van-button>
+        </view>
+    </view>
+</block>

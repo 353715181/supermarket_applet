@@ -1,0 +1,133 @@
+page {
+    background-color: #ffffff;
+    padding         : 20rpx;
+    width: 98vw;
+    .service_page {
+        .auto_service {
+            .title {
+                color      : #464245;
+                font-weight: 500;
+                font-size  : 40rpx;
+            }
+
+            .auto_button {
+                margin-top    : 20rpx;
+                margin-left   : 0;
+                width         : 200rpx;
+                height        : 166rpx;
+                display       : flex;
+                flex-direction: column;
+
+                .btnImg {
+                    width : 100rpx;
+                    height: 100rpx;
+                    margin: 0;
+                }
+
+                .text {
+                    width     : 100%;
+                    height    : 50rpx;
+                    text-align: left;
+                    font-size : small;
+                    color     : #4c484b;
+                }
+            }
+        }
+    }
+
+
+
+
+    .question_list {
+        margin-top: 30rpx;
+
+        .title {
+            color      : #464245;
+            font-weight: 500;
+            font-size  : 40rpx;
+        }
+
+        .question {
+            margin-top: 20rpx;
+
+            .van-collapse {
+                .van-cell--clickable {
+                    padding-left : 0;
+                    padding-right: 40rpx;
+                    border-top   : none;
+                }
+
+                .van-collapse-item {
+                    border-top: none;
+                }
+
+                .van-collapse-item__content {
+
+                    padding-left: 0;
+                }
+
+
+            }
+        }
+    }
+
+
+    .line {
+        height: 300rpx;
+
+    }
+
+
+    .button-area {
+        width   : 720rpx;
+        position: fixed;
+        bottom  : 0;
+        z-index : 100;
+        background-color: #ffffff;
+        .onLine_service {
+            margin: 20rpx;
+            .van-button {
+                border-radius: 30rpx;
+            }
+        }
+
+        .service_phone {
+            height         : 80rpx;
+            margin         : 10rpx;
+            color          : #73b36c;
+            text-align     : center;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+
+            .icon {
+                width      : 50rpx;
+                height     : 50rpx;
+                align-self : center;
+                display    : flex;
+                align-items: center;
+
+                .van-icon {
+                    height  : 40rpx;
+                    top     : 0;
+                    position: relative;
+                }
+            }
+
+            .text {
+                position   : relative;
+                height     : 50rpx;
+                text-align : center;
+                font-size  : small;
+                line-height: 50rpx;
+            }
+        }
+
+        .tips {
+            font-size : small;
+            color     : #b7b7b7;
+            text-align: center;
+            margin    : 40rpx;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<view class="card" bind:tap="toGoodsDetail" data-goodsId="{{goods.goodsId}}">
+    <view class="card-image">
+        <van-image lazy-load radius="10" width="100%" height="100%" fit="contain" src="{{goods.imgUrl}}"/>
+    </view>
+    <view class="product-content">
+        <view class="product-name">{{goods.goodsName}}{{goods.inventory-0===0?'(已售完)':""}}</view>
+        <!-- 卡片标签 -->
+        <view class="product-tag">
+            <van-tag plain text-color="#ee0a24" wx:if="{{goods.tagName}}">{{goods.tagName}}</van-tag>
+        </view>
+        <!-- 卡片价格 -->
+        <!-- vant demo 开始 -->
+        <view class="van-card__bottom">
+            <view class="origin-price-class">{{goods.originPrice-0>0?'¥'+goods.originPrice:' '}}</view>
+            <view class="van-card__price price-class">
+                <text class="van-card__price-integer">¥</text>
+                <text class="van-card__price-decimal">{{goods.price}}</text>
+            </view>
+            <view class="van-card__num num-class" catch:tap="handleBuyNum" data-goods="{{goods}}">
+                <van-icon class="buy-button" name="cart-circle" info="{{goods.buyNum===0?'':goods.buyNum}}"
+                          color="#77cb7c" size="66rpx"
+                          />
+            </view>
+
+        </view>
+    </view>
+</view>
+

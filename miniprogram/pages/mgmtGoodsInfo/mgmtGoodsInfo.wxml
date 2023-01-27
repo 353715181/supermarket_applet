@@ -1,0 +1,124 @@
+<van-cell-group>
+    <!--    商品名-->
+    <van-field
+            required
+            model:value="{{ goodsName }}"
+            placeholder="请输入商品名"
+            border="{{ false }}"
+            label="商品名"
+            clearable
+    />
+    <!--    商品类别-->
+    <van-cell class="{{haveCategory?'categoryClick':'categoryColor'}}" required title="商品分类" is-link
+              value="{{categoryName}}" bind:tap="showCategory" border="{{false}}"/>
+    <!--    是否上架-->
+    <view class="goods_sale">
+        <van-radio-group value="{{ isSale }}">
+            <van-row>
+                <van-col offset="1" span="7" class="sale_title">上架状态</van-col>
+                <van-col span="6" data-name="1" bind:tap="changeSale">
+                    <van-radio class="sale_radio" icon-size="40rpx" name="1">上架</van-radio>
+                </van-col>
+                <van-col span="8" data-name="0" bind:tap="changeSale">
+                    <van-radio class="sale_radio" icon-size="40rpx" name="0">下架</van-radio>
+                </van-col>
+            </van-row>
+        </van-radio-group>
+    </view>
+    <!--    商品标签-->
+    <van-field
+            model:value="{{ tagName }}"
+            placeholder="请输入标签"
+            border="{{ false }}"
+            label="标签"
+            clearable
+    />
+    <!--    原价-->
+    <van-field
+            model:value="{{ originPrice }}"
+            placeholder="请输入原价"
+            border="{{ false }}"
+            label="原价"
+            type="digit"
+            clearable
+    />
+    <!--    售价-->
+    <van-field
+            required
+            model:value="{{ price }}"
+            placeholder="请输入售价"
+            border="{{ false }}"
+            label="售价"
+            type="digit"
+            clearable
+    />
+    <!--    折扣-->
+    <van-field
+            required
+            model:value="{{ discount }}"
+            placeholder="请输入折扣"
+            border="{{ false }}"
+            label="折扣"
+            type="digit"
+            clearable
+    />
+    <!--    库存-->
+    <van-field
+            required
+            model:value="{{ inventory }}"
+            placeholder="请输入库存"
+            border="{{ false }}"
+            label="库存"
+            type="number"
+            clearable
+    />
+    <!--    最大购买数-->
+    <van-field
+            required
+            model:value="{{ maxBuy }}"
+            placeholder="请输入每单最大可购买数量"
+            border="{{ false }}"
+            label="每单最大购买量"
+            type="number"
+            clearable
+    />
+    <!--    成本价-->
+    <van-field
+            required
+            model:value="{{ costPrice }}"
+            placeholder="请输入成本价"
+            border="{{ false }}"
+            label="成本价"
+            type="digit"
+            clearable
+    />
+    <!--    商品图片-->
+    <van-field
+            class="goods_img_input"
+            required
+            border="{{ false }}"
+            label="图片"
+            disabled
+    />
+    <view class="upload">
+        <van-uploader file-list="{{ imgList }}" bind:oversize="oversize" bind:delete="deleteImg"
+                      preview-size="220rpx" max-size="{{1048576*2}}" upload-text="上传图片"
+                      accept="image" max-count="1" bind:after-read="afterRead"/>
+    </view>
+</van-cell-group>
+<view class="operation_button">
+    <block wx:if="{{add}}">
+        <button class="operation_button" type="primary" bind:tap="addGoods">添加</button>
+    </block>
+    <block wx:else>
+<!--        功能暂时停止-->
+<!--        <button class="operation_button" type="warn" bind:tap="deleteGoods">删除</button>-->
+        <button class="operation_button" type="primary" bind:tap="updateGoods">修改</button>
+    </block>
+</view>
+<van-action-sheet
+        show="{{ showCategory }}"
+        actions="{{ categoryOption }}"
+        bind:close="onClose"
+        bind:select="onSelect"
+/>

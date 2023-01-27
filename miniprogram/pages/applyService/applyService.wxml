@@ -1,0 +1,51 @@
+<view class="apply_service_page">
+    <block wx:if="{{!query}}">
+        <view class="card">
+            <van-cell title="申请原因" required="{{true}}" bind:click="chooseApplyReason" class="{{applyType?'cell_value':''}}" is-link value="{{applyType?applyType:'请选择'}}" />
+            <van-cell title="原因描述" required="{{true}}" border="{{false}}" />
+            <view class="opinion_content">
+                <textarea style="height:300rpx;width:100%" model:value="{{applyRemarks}}" maxlength="{{100}}" bindinput="input" placeholder="感谢您对商超的信赖，给您带来的不便深感歉意，请详细描述您遇见的问题，提交后我们会尽快与您取得联系" placeholder-style="color:#c8c9cc;font-size:28rpx;font-weight:400" />
+            </view>
+            <!-- <line /> -->
+            <view class="upload">
+                <!-- <van-cell title="上传图片" border="{{false}}" /> -->
+                <van-uploader file-list="{{ tempList }}" 	 bind:delete="deleteImg" preview-size="220rpx" max-size="{{1048576*2}}" upload-text="上传图片" bind:oversize="oversize" accept="image" max-count="6" bind:after-read="afterRead" />
+            </view>
+            <view class="button">
+                <van-button color="linear-gradient(to right, #67d261, #5db664)" round size="large" type="info" disabled="{{!isSubmit}}" bind:click="onSubmit">
+                    提交
+                </van-button>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="card">
+            <van-cell title="申请时间" class="cell_value" value="{{createdTime}}" />
+            <van-cell title="申请原因" class="cell_value" value="{{applyType}}" />
+            <van-cell title="原因描述" border="{{false}}" />
+            <view class="opinion_content">
+                <textarea disabled="{{true}}" style="height:300rpx;width:100%" model:value="{{applyRemarks}}" maxlength="{{100}}" placeholder="感谢您对商超的信赖，给您带来的不便深感歉意，请详细描述您遇见的问题，提交后我们会尽快与您取得联系" placeholder-style="color:#c8c9cc;font-size:28rpx;font-weight:400" />
+            </view>
+            <!-- <line /> -->
+            <view class="upload">
+                <!-- <van-cell title="上传图片" border="{{false}}" /> -->
+                <block wx:for="{{imgList}}" wx:for-item="img" wx:key="index">
+                    <van-image width="110" fit="cover" height="110" bind:tap="clickImg" data-url="{{img.url}}" lazy-load src="{{img.url}}" />
+                </block>
+            </view>
+        </view>
+    </block>
+    <van-action-sheet show="{{ showActionSheet }}" safe-area-inset-bottom="{{true}}	" bind:close="onClose" description="申请原因">
+        <view class="cell_group">
+            <van-radio-group value="{{ radio }}" bind:change="onChange">
+                <van-cell-group>
+                    <block wx:for="{{actions}}" wx:for-item="radio" wx:key="name">
+                        <van-cell title="{{radio.value}}" clickable data-name="{{radio.name}}" bind:click="onClick">
+                            <van-radio checked-color="#51a938" slot="right-icon" name="{{radio.name}}" />
+                        </van-cell>
+                    </block>
+                </van-cell-group>
+            </van-radio-group>
+        </view>
+    </van-action-sheet>
+</view>

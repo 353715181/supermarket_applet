@@ -1,0 +1,12 @@
+<view class="opinion_content">
+    <textarea style="height:300rpx;width:100%" model:value="{{value}}" maxlength="{{100}}" bindinput="input" placeholder="我们期待您的每一次心声，感谢您的每一个建议和意见，我们会尽己所能给您提供更好的服务" placeholder-style="color:#c8c9cc;font-size:28rpx;font-weight:400" />
+    <view class="text_length" style="color:#c8c9cc;font-size:28rpx;font-weight:400">
+        {{textLength}}/100
+    </view>
+</view>
+<van-uploader file-list="{{ fileList }}" bind:delete="deleteImg" upload-text="上传图片" preview-size="220rpx" max-size="{{1048576}}" bind:oversize="oversize"	 accept="image" max-count="1" bind:after-read="afterRead" />
+<view class="button">
+    <van-button color="linear-gradient(to right, #67d261, #5db664)" round size="large" type="info" disabled="{{!isSubmit}}" bind:click="onSubmit">
+        提交
+    </van-button>
+</view>

@@ -1,0 +1,38 @@
+<view class="Gold">
+    <van-sticky>
+        <van-search value="{{ value }}" input-align="center" placeholder="用户手机号"/>
+    </van-sticky>
+    <block wx:for="{{userList}}" wx:key="index" wx:for-item="user">
+        <view class="card">
+            <van-cell-group>
+                <van-cell title="手机号" value='{{user.phone?user.phone:"--"}}'/>
+                <van-cell title="已邀人数" value="{{user.shareNum?user.shareNum:'--'}}"/>
+                <van-cell title="可用果币" value="{{user.goldNum?user.goldNum:'--'}}"/>
+                <van-cell title="已用果币" value="{{user.usedGold?user.usedGold:'--'}}"/>
+                <van-cell title="修改时间" value="{{user.updateTime?user.updateTime:'--'}}"/>
+                <view class="button_group">
+                    <view class="button">
+                        <button size="mini" round type="primary">
+                            添加
+                        </button>
+                    </view>
+                    <view class="button">
+                        <button size="mini" round type="warn">
+                            减少
+                        </button>
+                    </view>
+                </view>
+            </van-cell-group>
+        </view>
+    </block>
+</view>
+<van-dialog
+        use-slot
+        title="{{operationType==0?'减少':'添加'}}添加用户{{phone}}的果币"
+        show="{{ edit }}"
+        show-cancel-button
+        bind:close="onClose"
+        bind:getuserinfo="getUserInfo"
+>
+
+</van-dialog>

@@ -1,0 +1,18 @@
+.add_goods {
+    background-color: #5caf63;
+    z-index: 99;
+    height: 100rpx;
+    width: 100rpx;
+    position: fixed;
+    right: 20rpx;
+    bottom: 160rpx;
+    border-radius: 99rpx;
+    /*display: flex;*/
+    text-align: center;
+}
+
+.add_icon {
+    position: relative;
+    top: 15rpx;
+}
+

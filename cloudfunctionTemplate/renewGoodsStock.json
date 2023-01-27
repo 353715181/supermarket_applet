@@ -1,0 +1,14 @@
+[
+  {
+    "name": "更新库存",
+    "value": {
+      "operationType": 1,
+      "goodsList": [
+        {
+          "_id": "28ee4e3e600d83e400d0523b50c3aa73",
+          "buyNum": 10
+        }
+      ]
+    }
+  }
+]

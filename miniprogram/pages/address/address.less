@@ -1,0 +1,101 @@
+page {
+    width           : 100%;
+    height          : 190vw;
+    background-color: #ffffff;
+
+    .add-address {
+        position  : relative;
+        top       : 320rpx;
+        display   : inline;
+        text-align: center;
+
+        .text {
+            font-size     : small;
+            color         : #999999;
+            padding-bottom: 30rpx;
+        }
+
+        .button {
+            width : 420rpx;
+            margin: 0 auto;
+
+        }
+    }
+
+    .show-address {
+        .address-list {
+            display: inline;
+
+
+        }
+
+
+        .van-swipe-cell {
+            margin-bottom: 15rpx 0;
+
+
+            .van-swipe-cell__right {
+                background-color: #dd4d47;
+                width           : 130rpx;
+                display         : flex;
+                justify-content : center;
+                align-items     : center;
+                color           : #fcf3f3;
+            }
+        }
+
+
+        .address {
+            padding            : 10rpx;
+            display            : flex;
+            border-bottom-style: solid;
+            border-color       : #f5f6f7;
+
+            .address-info {
+                flex   : 8;
+                display: flex;
+
+                // justify-content: center;
+                .van-cell {
+                    // width: 730rpx;
+                }
+
+                .address-radio {
+                    padding-right: 20rpx;
+                }
+
+                .address-title {
+                    display: flex;
+
+                    .van-cell-text {
+                        padding-right: 20rpx;
+                    }
+                }
+
+                .address-icon {
+                    padding-right: 20rpx;
+                }
+            }
+
+            .edit-icon {
+                display        : flex;
+                // margin: auto;
+                justify-content: center;
+                align-items    : center;
+                width          : 100%;
+                flex           : 2;
+            }
+
+
+
+
+        }
+
+        .button {
+
+            width : 70%;
+            margin: 50rpx auto;
+
+        }
+    }
+}

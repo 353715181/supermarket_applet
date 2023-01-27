@@ -1,0 +1,204 @@
+page {
+    // padding         : 20rpx;
+    background-color: hsl(0, 0%, 96%);
+
+    .order_state {
+        margin-left: 20rpx;
+        height     : 100rpx;
+        display    : flex;
+        align-items: center;
+
+        .state_text {
+            color      : #333333;
+            font-size  : x-large;
+            font-weight: 600;
+        }
+
+        .icon {
+            display : inline-block;
+            position: relative;
+            top     : 5rpx;
+        }
+
+    }
+
+    .wait_pay {
+        margin-left: 20rpx;
+
+        width: 89%;
+        border          : 1rpx;
+        border-radius   : 20rpx;
+        background-color: #ffffff;
+        // margin-right    : 40rpx;
+        padding         : 20rpx;
+        height          : 120rpx;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : space-between;
+
+        .tips {
+            font-weight: 600;
+            color      : #333333;
+        }
+
+        .button_list {
+            display        : flex;
+            justify-content: flex-end;
+
+            .van-button {
+                margin-right: 10rpx;
+
+                .van-button__text {
+                    border-color: #dedede;
+                    color       : #333333;
+                }
+            }
+
+            .pay_order {
+                background     : -webkit-linear-gradient(left, #06e411, #5db764);
+                width          : 190rpx;
+                height         : 60rpx;
+                line-height    : 60rpx;
+                display        : flex;
+                border-radius  : 200rpx;
+                justify-content: center;
+
+                .text {
+                    font-size: smaller;
+                    color    : #e8f7e8;
+                }
+
+                .van-count-down {
+                    display    : flex;
+                    align-items: center;
+                    line-height: 60rpx;
+                    color      : #e8f7e8;
+
+                    .item {
+                        display   : inline-block;
+                        width     : 32px;
+                        color     : #e8f7e8;
+                        font-size : 28rpx;
+                        text-align: left;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .receive_info {
+        margin-left: 20rpx;
+
+        margin-top      : 20rpx;
+        margin-right    : 20rpx;
+        padding         : 10rpx;
+        border          : 1rpx;
+        border-radius   : 30rpx;
+        background-color: #ffffff;
+
+        .send_time {}
+
+        .addr_info {}
+
+        .user_info {
+            text-align: right;
+            padding   : 0 32rpx;
+            color     : #333333;
+            font-size : 30rpx;
+            margin-bottom: 20rpx;
+
+        }
+
+        .van-cell {
+            .van-cell__title {
+                font-size: 30rpx;
+                color    : #929292;
+            }
+
+            .van-cell__value {
+                font-size: 30rpx;
+                color    : #333333;
+            }
+
+        }
+        .van-field__label{
+            color    : #929292;
+            
+        }
+        textarea{
+            text-align: right;
+            color: #333333;
+        }
+    }
+
+    .order_goods {
+        margin-left: 20rpx;
+
+        margin-top      : 20rpx;
+        margin-right    : 20rpx;
+        padding         : 10rpx;
+        border          : 1rpx;
+        border-radius   : 30rpx;
+        background-color: #ffffff;
+
+        .order-list {
+            .goods {
+                .van-cell__label {
+                    padding-top: 20rpx;
+                }
+
+                .van-icon {
+                    height: 120rpx;
+                    width : 120rpx;
+                }
+            }
+        }
+
+        .pay-money {
+            .van-cell__value {
+                // font-weight: bold;
+                color: #323233;
+            }
+
+            .free-price {
+
+                .van-cell__value {
+                    color: #ec6c68;
+                }
+            }
+        }
+
+    }
+
+    .order_info {
+        margin-left: 20rpx;
+
+        margin-top      : 20rpx;
+        margin-right    : 20rpx;
+        padding         : 10rpx;
+        border          : 1rpx;
+        border-radius   : 30rpx;
+        background-color: #ffffff;
+
+
+        .van-cell__value {
+            color   : #323233;
+            overflow: visible;
+        }
+
+
+    }
+
+    .placeholder-view {
+        width : 100%;
+        height: 150rpx;
+    }
+
+    .line {
+        margin          : 0 auto;
+        width           : 90%;
+        height          : 2rpx;
+        background-color: #f5f5f5;
+    }
+}

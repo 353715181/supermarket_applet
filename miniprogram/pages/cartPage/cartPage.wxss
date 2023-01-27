@@ -1,0 +1,126 @@
+page .cart-content {
+    background-color: #f7f8fa;
+    text-align: center;
+}
+page .cart-content .emptyCart {
+    background-color: #fefefe;
+    height: 100vw;
+}
+page .cart-content .emptyCart .van-image {
+    float: initial;
+    top: 16vw;
+}
+page .cart-content .emptyCart .cart-tips {
+    position: relative;
+    top: 100rpx;
+    color: #888888;
+    font-size: 11pt;
+}
+page .cart-content .van-swipe-cell {
+    margin-bottom: 15rpx 0;
+}
+page .cart-content .van-swipe-cell .van-swipe-cell__right {
+    width: 160rpx;
+}
+page .cart-content .van-swipe-cell .goods {
+    background-color: #ffffff;
+    display: flex;
+    height: 200rpx;
+}
+page .cart-content .van-swipe-cell .goods .checkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+page .cart-content .van-swipe-cell .goods .checkBox .van-checkbox {
+    display: flex;
+}
+page .cart-content .van-swipe-cell .goods .checkBox .van-checkbox .redioArea {
+    height: 100rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo {
+    flex: 8;
+    height: 100%;
+    position: relative;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card {
+    background-color: #ffffff;
+    height: 200rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-card__header {
+    height: 100%;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-card__content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 30rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-card__content .van-card__desc {
+    padding-top: 20rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-card__content .van-card__bottom {
+    padding-bottom: 20rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-stepper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    bottom: 70rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-stepper .van-stepper__minus {
+    width: 46rpx;
+    height: 46rpx;
+    background-color: #ffffff;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-stepper .van-stepper__input {
+    width: 46rpx;
+    height: 46rpx;
+}
+page .cart-content .van-swipe-cell .goods .goodsInfo .van-card .van-stepper .van-stepper__plus {
+    width: 46rpx;
+    height: 46rpx;
+    background-color: #ffffff;
+}
+page .cart-content .van-swipe-cell__right {
+    background-color: #dd4d47;
+    width: 130rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fcf3f3;
+}
+page .van-submit-bar .tip {
+    display: flex;
+}
+page .van-submit-bar .tip navigator {
+    color: blue;
+}
+page .van-submit-bar .before {
+    height: 100rpx;
+    width: 200rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+page .placeholder-view {
+    width: 100%;
+    height: 230rpx;
+}
+page .login {
+    position: relative;
+    top: 320rpx;
+    display: inline;
+    text-align: center;
+}
+page .login .text {
+    font-size: small;
+    color: #999999;
+    padding-bottom: 30rpx;
+}
+page .login .button {
+    width: 420rpx;
+    margin: 0 auto;
+}

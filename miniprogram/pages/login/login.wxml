@@ -1,0 +1,9 @@
+<view class="login">
+    <view class="text">您还没有登陆哦</view>
+    <view class="button">
+        <van-button color="linear-gradient(to right, #67d261, #5db664)" round size="large" open-type="getPhoneNumber" type="info" bindgetphonenumber="getPhoneNumber"	>
+            去登陆
+        </van-button>
+    </view>
+</view>
+

@@ -1,0 +1,13 @@
+<view class="tab">
+  <van-tabs active="1" bind:change="onChange" sticky="{{true}}" swipeable="{{true}}">
+    <van-tab title="全部" name="1">
+      <slot></slot>
+    </van-tab>
+    <van-tab title="待支付" name="2">
+      <slot></slot>
+    </van-tab>
+    <van-tab title="待收货" name="3">
+      <slot></slot>
+    </van-tab>
+  </van-tabs>
+</view>

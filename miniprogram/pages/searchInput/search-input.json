@@ -1,0 +1,10 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "搜索",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff",
+    "onReachBottomDistance": 300
+
+
+
+}

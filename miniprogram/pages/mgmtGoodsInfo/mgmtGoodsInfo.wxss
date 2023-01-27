@@ -1,0 +1,46 @@
+.categoryColor .van-cell__title {
+    color: #646566;
+}
+
+.categoryColor .van-cell__value {
+    position: relative;
+    left: -124rpx;
+    text-align: left;
+    color: #c8c9cc;
+}
+
+.categoryClick .van-cell__title {
+    color: #646566;
+}
+
+.categoryClick .van-cell__value {
+    position: relative;
+    left: -124rpx;
+    text-align: left;
+    color: #323233;
+}
+
+.goods_img_input .van-field__label {
+    color: #646566;
+}
+
+
+.goods_sale {
+    height: 88rpx;
+    line-height: 88rpx;
+    background-color: #ffffff;
+}
+
+.goods_sale .sale_title {
+    font-size: 30rpx;
+    color: #646566;
+}
+
+.goods_sale .sale_radio {
+    position: relative;
+    top: 25rpx;
+}
+.operation_button{
+    margin-top: 20rpx;
+}
+

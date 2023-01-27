@@ -1,0 +1,19 @@
+<view class="tab">
+  <van-tabs active="{{active}}" bind:change="onChange" sticky="{{true}}">
+    <van-tab title="全部" name="0"></van-tab>
+    <van-tab title="待支付" name="1"></van-tab>
+    <van-tab title="待收货" name="2"></van-tab>
+    <van-tab title="售后" name="3"></van-tab>
+    <view class="order_list">
+      <block wx:if="{{orderList.length>0}}">
+        <block wx:for="{{orderList}}" wx:for-item="o" wx:key="_id">
+          <my-order-list order="{{o}}" bind:onDeleteOrder="onDeleteOrder" bind:onShow="onShow" bind:cancelOrder="cancelOrder"></my-order-list>
+        </block>
+      </block>
+      <block wx:else>
+        <view class="no_order">暂时还没有</view>
+      </block>
+    </view>
+  </van-tabs>
+  <van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a" show-cancel-button></van-dialog>
+</view>

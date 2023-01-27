@@ -1,0 +1,16 @@
+.login {
+  position: relative;
+  top: 320rpx;
+  display: inline;
+  text-align: center;
+}
+.login .text {
+  font-size: small;
+  color: #999999;
+  padding-bottom: 30rpx;
+}
+.login .button {
+  width: 420rpx;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=login.css.map */

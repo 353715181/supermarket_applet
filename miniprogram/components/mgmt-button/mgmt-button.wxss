@@ -1,0 +1,47 @@
+.mgmt_button_list {
+  display: flex;
+  justify-content: flex-end;
+}
+.common_button {
+  color: #33c044;
+    margin-left: 20rpx;
+}
+.common_button .van-button__text {
+  color: #ffffff;
+}
+.mgmt_cell_value .van-cell__value{
+    color      : #323233;
+    font-weight: 700;
+}
+.upload {
+    background-color: #ffffff;
+}
+.van-uploader{
+    padding-left: 20rpx;
+
+}
+.van-uploader  .van-uploader__upload{
+    width : 100rpx;
+    height: 100rpx;
+}
+.mgmt_button_list .van-popup{
+    width: 90%;
+}
+.dialog_content{
+    padding: 20rpx;
+    width: 680rpx;
+    height: 500rpx;
+
+}
+.operateType{
+    font-size: normal;
+}
+.cancelButton{
+    margin-right: 20rpx;
+}
+
+
+
+
+
+

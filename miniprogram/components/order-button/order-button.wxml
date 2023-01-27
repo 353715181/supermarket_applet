@@ -1,0 +1,91 @@
+<view class="button_list">
+    <!-- 0 取消
+    1 下单 待支付
+    2 支付成功，待商家接单
+    3 打包中
+    4 打包完成，待配送
+    5 配送中
+    6 订单已签收
+    7 售后（已经申请售后） -->
+    <block wx:if="{{order.state==1}}">
+        <van-button size="small" color="#dedede" round plain type="primary" bind:tap="cancelOrder">
+            取消订单
+        </van-button>
+        <view class="pay_order" bind:tap="onToPay">
+            <view class="text">去支付</view>
+            <van-count-down auto-start bind:change="onCountDown" disabled="{{pay}}" time="{{ time }}"
+                            bind:finish="onFinish" format="mm:ss"/>
+        </view>
+    </block>
+    <block wx:if="{{order.state==0}}">
+        <van-button size="small" round plain type="primary" bind:tap="deleteOrder">删除订单</van-button>
+        <van-button size="small" round plain type="primary" bind:tap="addToCart">再次购买</van-button>
+    </block>
+    <block wx:if="{{order.state==2}}">
+<!--        <van-button size="small" color="#dedede" round plain type="primary" open-type="contact">-->
+<!--            联系客服-->
+<!--        </van-button>-->
+        <van-button size="small" color="#dedede" round plain type="primary" bind:tap="cancelOrder">
+            取消订单
+        </van-button>
+    </block>
+    <block wx:if="{{order.state>2&&order.state<5}}">
+        <van-button size="small" color="#dedede" round plain type="primary" open-type="contact">
+            联系客服
+        </van-button>
+<!--        <van-button size="small" color="#dedede" round plain type="primary" bind:tap="cancelOrder">-->
+<!--            取消订单-->
+<!--        </van-button>-->
+    </block>
+    <block wx:if="{{order.state==5}}">
+        <view>
+            <van-button size="small" color="#dedede" round plain type="primary" open-type="contact">
+                联系客服
+            </van-button>
+            <button size="mini" plain round type="primary" bind:tap="onCall">
+                联系配送员
+            </button>
+        </view>
+        <view>
+            <van-button size="small" color="#dedede" round plain type="primary" open-type="contact">
+                联系客服
+            </van-button>
+<!--            <van-button size="small" color="#dedede" round plain type="primary" open-type="contact">-->
+<!--                取消订单-->
+<!--            </van-button>-->
+        </view>
+    </block>
+    <block wx:if="{{order.state==6}}">
+        <van-button size="small" color="#dedede" round plain type="primary" bind:tap="applyService">
+            申请售后
+        </van-button>
+    </block>
+    <block wx:if="{{order.state==7||order.state==8}}">
+        <van-button size="small" color="#dedede" round plain type="primary" bind:tap="queryApplyService">
+            售后详情
+        </van-button>
+    </block>
+    <van-action-sheet show="{{ showActionSheet }}" safe-area-inset-bottom="{{true}}	" bind:close="onClose"
+                      description="取消原因">
+        <view class="cell_group">
+            <van-radio-group value="{{ radio }}" bind:change="onChange">
+                <van-cell-group>
+                    <block wx:for="{{actions}}" wx:for-item="radio" wx:key="name">
+                        <van-cell title="{{radio.value}}" clickable data-name="{{radio.name}}" bind:click="onClick">
+                            <van-radio checked-color="#51a938" slot="right-icon" name="{{radio.name}}"/>
+                        </van-cell>
+                    </block>
+                </van-cell-group>
+            </van-radio-group>
+        </view>
+        <view class="confirm_button">
+            <van-row>
+                <van-col span="20" offset="2">
+                    <button class="confirm_button" bind:tap="confirmCancelOrder" type="primary">
+                        确定
+                    </button>
+                </van-col>
+            </van-row>
+        </view>
+    </van-action-sheet>
+</view>

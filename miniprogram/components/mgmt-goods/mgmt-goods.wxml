@@ -1,0 +1,43 @@
+<view class="mgmt-goods-card">
+    <view class="mgmt-card-image">
+        <van-image  bind:tap="toPreview" lazy-load radius="10" width="100%" height="100%" fit="contain" src="{{goods.imgUrl}}"/>
+    </view>
+    <view class="mgmt-product-content">
+        <view class="mgmt-product-name">{{goods.goodsName}}{{goods.inventory-0===0?'(已售完)':""}}</view>
+        <!-- 卡片标签 -->
+        <view class="mgmt-product-tag" wx:if="{{goods.tagName}}">
+            <van-tag plain text-color="#ee0a24">{{goods.tagName}}</van-tag>
+        </view>
+        <!-- 卡片价格 -->
+        <!-- vant demo 开始 -->
+        <view class="mgmt-van-card__bottom">
+            <view class="mgmt-origin-price-class" wx:if="{{goods.originPrice}}">¥{{goods.originPrice}}</view>
+            <view class="mgmt-van-card__price mgmt-price-class">
+                <text class="mgmt-van-card__price-integer">¥</text>
+                <text class="mgmt-van-card__price-decimal">{{goods.price}}</text>
+            </view>
+        </view>
+        <view class="inventory">
+            库存:{{goods.inventory}}
+        </view>
+        <view class="discount">
+            折扣:{{goods.discount}}
+        </view>
+    </view>
+</view>
+<view class="button_group">
+    <van-row>
+        <van-col offset="2" span="10">
+            <button class="mini-btn" data-id="{{goods._id}}" bind:tap="toUpdatePage" plain type="primary" size="mini">
+                修改
+            </button>
+        </van-col>
+        <van-col span="12">
+            <button class="mini-btn" type="warn" wx:if="{{goods.isSale==1}}" size="mini" data-isSale="0"
+                    bind:tap="updateGoodsSale">下架
+            </button>
+            <button class="mini-btn" type="primary" wx:else size="mini" data-isSale="1" bind:tap="updateGoodsSale">上架
+            </button>
+        </van-col>
+    </van-row>
+</view>

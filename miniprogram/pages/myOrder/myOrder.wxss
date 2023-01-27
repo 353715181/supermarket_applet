@@ -1,0 +1,13 @@
+page .tab .van-tabs .van-tab .van-ellipsis {
+  color: #5fb068;
+}
+page .tab .van-tabs .van-tabs__line {
+  background-color: #5fb068;
+}
+page .order_list {
+  margin-top: 30rpx;
+}
+page .order_list .no_order {
+  text-align: center;
+  color: #333333;
+}

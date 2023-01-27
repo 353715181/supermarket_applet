@@ -1,0 +1,26 @@
+<view class="tab">
+    <van-tabs active="{{active}}" ellipsis="{{false}}" bind:change="onChange" sticky="{{true}}">
+        <van-tab title="待接单" info="{{waitTakingCount>0?waitTakingCount:''}}" name="2"></van-tab>
+        <van-tab title="待分拣" info="{{waitSortingCount>0?waitSortingCount:''}}" name="3"></van-tab>
+        <van-tab title="待配送" info="{{waitDeliveryCount>0?waitDeliveryCount:''}}" name="4" wx:if="{{level>5}}"></van-tab>
+        <van-tab title="配送中" info="{{deliveryingCount>0?deliveryingCount:''}}" name="5" wx:if="{{level>5}}"></van-tab>
+        <van-tab title="已送达" name="6" wx:if="{{level>5}}"></van-tab>
+        <van-tab title="待售后" info="{{applyServiceCount>0?applyServiceCount:''}}" name="7" wx:if="{{level>5}}"></van-tab>
+    </van-tabs>
+
+    <view class="order_list">
+        <block wx:if="{{orderList.length>0}}">
+            <block wx:for="{{orderList}}" wx:for-item="o" wx:key="_id">
+                <mgmt-order-list order="{{o}}" bind:orderTaking="orderTaking" bind:sorting="sorting"
+                                 bind:finishDelivery="finishDelivery" bind:startDelivery="startDelivery"
+                                 bind:confirmHandle="confirmHandle"
+                                 bind:cancelMgmtOrder="cancelMgmtOrder"></mgmt-order-list>
+            </block>
+        </block>
+        <block wx:else>
+            <view class="no_order">暂时还没有</view>
+        </block>
+    </view>
+    <van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a"
+                show-cancel-button></van-dialog>
+</view>

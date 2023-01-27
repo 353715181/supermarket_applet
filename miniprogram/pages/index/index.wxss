@@ -1,0 +1,82 @@
+.index_swiper {
+    background-color: #ffffff;
+    margin-top: 110rpx;
+}
+.index_swiper swiper {
+    width: 100%;
+    height: 340rpx;
+}
+.index_swiper swiper image {
+    width: 100%;
+}
+.cat_grid {
+    background-color: #ffffff;
+    padding: 14rpx;
+    border-radius: 30px;
+    position: relative;
+}
+.cat_grid .scroll-view .category_area {
+    height: 405rpx;
+    width: 800rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.scroll-box {
+    width: 50px;
+    height: 3px;
+    background: rgb(221, 220, 220);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 13rpx;
+    border-radius: 10rpx;
+}
+.scroll-bar {
+    width: 25px;
+    height: 3px;
+    background: #5caf63;
+    position: absolute;
+    left: 0;
+    border-radius: 8rpx;
+}
+.cat_grid .scroll-view .category_area .cagegory {
+    width: 160rpx;
+    height: 160rpx;
+    margin: 10rpx;
+}
+.cat_grid .scroll-view .category_area .cagegory .category_img {
+    text-align: center;
+}
+.cat_grid .scroll-view .category_area .cagegory .grid_text {
+    text-align: center;
+    color: #353535;
+    font-size: smaller;
+    font-weight: 600;
+}
+.icon_line {
+    height: 50rpx;
+    text-align: center;
+    font-size: smaller;
+    line-height: 50rpx;
+    color: #5caf63;
+}
+.icon_line .van-icon {
+    position: relative;
+    top: 6rpx;
+}
+.van-divider {
+    height: 18rpx;
+}
+.van-grid .van-grid-item .van-card {
+    background-color: #ffffff;
+}
+.goodsList {
+    margin-top: 20rpx;
+    background-color: #f7f8fa;
+    height: 100%;
+    width: 100%;
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

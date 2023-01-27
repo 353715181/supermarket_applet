@@ -1,0 +1,238 @@
+{
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "bundle": false,
+    "useApiHostProcess": true,
+    "lazyloadPlaceholderEnable": false,
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.3",
+  "appid": "wx6dfe62810a590a0f",
+  "projectname": "%E8%94%AC%E6%9E%9C%E4%B9%B0%E8%8F%9C",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": [
+        {
+          "name": "按钮",
+          "pathName": "components/div-button/div-button",
+          "query": "",
+          "scene": null
+        }
+      ]
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "定位",
+          "pathName": "pages/location/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "分类",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "购物车",
+          "pathName": "pages/cart/cart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "搜索",
+          "pathName": "pages/searchInput/search-input",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "后台",
+          "pathName": "pages/management/management",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "地址",
+          "pathName": "pages/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "提交订单",
+          "pathName": "pages/submitOrder/submitOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "添加地址",
+          "pathName": "pages/addAddress/addAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 10,
+          "name": "登陆页面",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购物车商品",
+          "pathName": "components/cate-goods/cate-goods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "修改地址",
+          "pathName": "pages/editAddr/editAddr",
+          "query": "id=",
+          "scene": null
+        },
+        {
+          "name": "提交意见",
+          "pathName": "pages/opinion/opinion",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "客服和帮助",
+          "pathName": "pages/customerService/customerService",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单详情",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "_id=6127fe145fbd0d2b0056b00700864413",
+          "scene": null
+        },
+        {
+          "name": "按钮",
+          "pathName": "components/div-button/div-button",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的订单",
+          "pathName": "pages/myOrder/myOrder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付状态页",
+          "pathName": "pages/payState/payState",
+          "query": "id=3dfe72d65fb280af00e0876f66e55868&success=true",
+          "scene": null
+        },
+        {
+          "name": "设置界面",
+          "pathName": "pages/seting/seting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试组件",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "申请售后",
+          "pathName": "pages/applyService/applyService",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "邀请页",
+          "pathName": "pages/invitePage/invitePage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单管理",
+          "pathName": "pages/mgmtOrder/mgmtOrder",
+          "query": "level=6",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "srcMiniprogramRoot": "miniprogram/",
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

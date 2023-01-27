@@ -1,0 +1,80 @@
+.mgmt-goods-card {
+    width: 345rpx;
+    height: 600rpx;
+    background-color: #ffffff;
+    border-radius: 10rpx;
+}
+
+.mgmt-card-image {
+    height: 354rpx;
+    width: 90%;
+    padding-left: 20rpx ;
+
+}
+
+.mgmt-product-content{
+    padding: 20rpx;
+}
+.mgmt-product-content .inventory{
+    position: absolute;
+    bottom: 130rpx;
+    right: 30rpx;
+    text-align: right;
+    color: #929292;
+}
+.mgmt-product-content .discount{
+    position: absolute;
+    bottom: 180rpx;
+    right: 30rpx;
+    text-align: right;
+    color: #929292;
+}
+
+
+.mgmt-product-name {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: small;
+}
+
+.mgmt-product-tag {
+    padding: 5rpx 0;
+}
+
+
+
+
+.mgmt-origin-price-class{
+    text-decoration: line-through;
+    font-size: small;
+    height: 25rpx;
+}
+.mgmt-van-card__price {
+    display: inline-block;
+    font-weight: 700;
+    color: #ee0a24;
+    color: var(--card-price-color, #ee0a24);
+    font-size: 12px;
+    font-size: var(--card-price-font-size, 12px)
+}
+
+.mgmt-price-class {
+    font-size: large;
+}
+.mgmt-van-card__price-integer {
+    font-size: 16px;
+    font-size: var(--card-price-integer-font-size, 16px)
+}
+.mgmt-van-card__price-decimal,
+.mgmt-van-card__price-integer {
+    font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+    font-family: var(--card-price-font-family, Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif)
+}
+
+.mini-btn{
+    margin-right: 10rpx;
+}
+
+

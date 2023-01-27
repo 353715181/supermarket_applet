@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "openapi": [
+      "templateMessage.send"
+    ]
+  },
+  "triggers": [
+    {
+      "name": "myTrigger",
+      "type": "timer",
+      "config": "0 0 0 * * * *"
+    }
+  ]
+
+}

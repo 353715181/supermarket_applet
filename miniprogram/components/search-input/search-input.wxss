@@ -1,0 +1,21 @@
+.search_input {
+  height: 70rpx;
+  padding: 20rpx;
+  line-height: 34px;
+  width: 95%;
+  display: flex;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+.search_input navigator {
+  border-radius: 17px;
+  padding-left: 10px;
+  background-color: #f7f8fa;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #666;
+  font-size: smaller;
+  text-align: center;
+}

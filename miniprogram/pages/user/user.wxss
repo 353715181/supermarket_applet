@@ -1,0 +1,192 @@
+.user-page {
+  padding: 20rpx;
+}
+.user-page .user {
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.user-page .user .img {
+  display: flex;
+  height: 100rpx;
+  width: 100rpx;
+  align-self: center;
+  justify-content: center;
+  flex: 2;
+}
+.user-page .user .img .van-image {
+  background-color: #ffffff;
+}
+.user-page .user .user-info {
+  flex: 7;
+  align-self: center;
+  padding-left: 30rpx;
+}
+.user-page .user .user-info .user-name {
+  color: #333333;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.user-page .user .user-info .user-phone {
+  position: relative;
+  bottom: -20rpx;
+  color: #333333;
+  padding-top: 10rpx;
+  display: flex;
+}
+.user-page .user .user-info .user-phone .phone {
+  padding-left: 6rpx;
+  font-size: small;
+}
+.user-page .user .login {
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.user-page .user .login .default-heard-img {
+  display: flex;
+  align-self: center;
+  flex: 2;
+  justify-content: center;
+}
+.user-page .user .login .default-heard-img .van-image {
+  border: 2px solid #a1a1a1;
+}
+.user-page .user .login .login-text {
+  flex: 7;
+  font-weight: 800;
+  font-size: 50rpx;
+  color: #333333;
+  margin-left: 40rpx;
+}
+.user-page .share_info {
+  background-color: #ffffff;
+  margin: 20rpx 0;
+  border-radius: 15px;
+  text-align: center;
+  height: 120rpx;
+}
+.user-page .share_info .value {
+  margin-top: 20rpx;
+  font-size: normal;
+}
+.user-page .share_info .title {
+  margin-top: 10rpx;
+  height: 20%;
+  color: #333333;
+  font-size: small;
+}
+.user-page .order {
+  border-radius: 15px;
+  padding: 20rpx;
+  background-color: #ffffff;
+  height: 200rpx;
+}
+.user-page .order .myOrder {
+  display: flex;
+  justify-content: space-between;
+}
+.user-page .order .myOrder .title {
+  color: #333333;
+  font-weight: bold;
+}
+.user-page .order .myOrder .all-order {
+  display: flex;
+  align-items: center;
+  color: #cfcfcf;
+  font-size: small;
+}
+.user-page .order .order-state {
+  display: flex;
+  padding-top: 40rpx;
+  justify-content: space-around;
+}
+.user-page .order .order-state .to-be-paid {
+  flex: 3.33;
+  text-align: center;
+}
+.user-page .order .order-state .goods-to-be-receive {
+  flex: 3.33;
+  text-align: center;
+}
+.user-page .order .order-state .refundment {
+  flex: 3.33;
+  text-align: center;
+}
+.user-page .order .order-state .text {
+  color: #555555;
+  font-size: small;
+}
+.user-page .order .order-state .wait_pay_num {
+  background-color: #e85d58;
+  height: 36rpx;
+  width: 36rpx;
+  border-radius: 30rpx;
+  font-size: small;
+  color: #ffffff;
+  justify-content: center;
+  position: relative;
+  bottom: 108rpx;
+  left: 120rpx;
+  z-index: 100;
+}
+.user-page .order .order-state .wait_receive {
+  background-color: #e85d58;
+  height: 36rpx;
+  width: 36rpx;
+  border-radius: 30rpx;
+  font-size: small;
+  color: #ffffff;
+  justify-content: center;
+  position: relative;
+  bottom: 108rpx;
+  left: 120rpx;
+  z-index: 100;
+}
+.user-page .service-context {
+  margin-top: 30rpx;
+  border-radius: 15px;
+  padding: 20rpx;
+  background-color: #ffffff;
+  height: 360rpx;
+}
+.user-page .service-context .my-service {
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  font-weight: bold;
+}
+.user-page .service-context .service-items .address {
+  text-align: center;
+}
+.user-page .service-context .service-items .address .text {
+  color: #555555;
+  font-size: small;
+}
+.user-page .service-context .service-items .feedback {
+  text-align: center;
+}
+.user-page .service-context .service-items .feedback .text {
+  color: #555555;
+  font-size: small;
+}
+.user-page .service-context .service-items .customer-service {
+  text-align: center;
+}
+.user-page .service-context .service-items .customer-service .text {
+  color: #555555;
+  font-size: small;
+}
+.user-page .service-context .service-items .prize {
+  text-align: center;
+}
+.user-page .service-context .service-items .prize .text {
+  color: #ea392c;
+  font-size: small;
+}
+.user-page .service-context .service-items .setting .text {
+  color: #555555;
+  font-size: small;
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "分类",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 300,
+  "enablePullDownRefresh":true
+}

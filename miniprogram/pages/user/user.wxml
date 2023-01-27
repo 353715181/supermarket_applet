@@ -1,0 +1,117 @@
+<view class="user-page">
+    <!-- 用户信息 -->
+    <view class="user">
+        <block wx:if="{{isLogin}}">
+            <view class="img">
+                <van-image height="150rpx" width="150rpx" round src="cloud://test-9gk2a9v0ee0aa199.7465-test-9gk2a9v0ee0aa199-1304152447/suguoxiansheng.png" />
+            </view>
+            <view class="user-info">
+                <view class="user-name">蔬果_{{userName}}</view>
+                <view class="user-phone">
+                    <van-icon name="phone-o" size="30rpx" />
+                    <view class="phone">{{userPhone}}</view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="login" bind:tap="login">
+                <view class="default-heard-img">
+                    <van-image height="150rpx" width="150rpx" round src="cloud://test-9gk2a9v0ee0aa199.7465-test-9gk2a9v0ee0aa199-1304152447/default.jpg" />
+                </view>
+                <view class="login-text">立即登陆</view>
+            </view>
+        </block>
+    </view>
+    <!-- 订单信息 -->
+    <view class="share_info">
+        <van-row gutter="20">
+            <van-col span="6">
+                <view class="value">{{shareNum}}</view>
+                <view class="title">已邀人数</view>
+            </van-col>
+            <van-col span="6">
+                <view class="value">{{intransit}}</view>
+                <view class="title">在途果币</view>
+            </van-col>
+            <van-col span="6">
+                <view class="value">{{goldNum}}</view>
+                <view class="title">可用果币</view>
+            </van-col>
+            <van-col span="6">
+                <view class="value">{{usedGold}}</view>
+                <view class="title">已用果币</view>
+            </van-col>
+        </van-row>
+    </view>
+    <view class="order">
+        <view class="myOrder" bind:tap="queryOrder" data-state="0">
+            <view class="title">我的订单</view>
+            <view class="all-order">
+                查看全部订单
+                <van-icon color="#cfcfcf" name="arrow" />
+            </view>
+        </view>
+        <view class="order-state">
+            <view class="to-be-paid" bind:tap="queryOrder" data-state="1">
+                <van-icon size="55rpx" name="todo-list-o" />
+                <view class="text">待付款</view>
+                <view wx:if="{{waitPayNum>0}}" class="wait_pay_num">{{waitPayNum}}</view>
+            </view>
+            <view class="goods-to-be-receive" bind:tap="queryOrder" data-state="2">
+                <van-icon size="55rpx" name="gift-card-o" />
+                <view class="text">待收货</view>
+                <view wx:if="{{waitReceive>0}}" class="wait_receive">{{waitReceive}}</view>
+            </view>
+            <view class="refundment" bind:tap="queryOrder" data-state="3">
+                <van-icon size="55rpx" name="cash-back-record" />
+                <view class="text">售后</view>
+            </view>
+        </view>
+    </view>
+    <!-- 服务 -->
+    <view class="service-context">
+        <view class="my-service">我的服务</view>
+        <view class="service-items">
+            <van-grid column-num="4" border="{{ false }}">
+                <view class="toAddr" bind:tap="onAddress">
+                    <van-grid-item use-slot>
+                        <view class="address">
+                            <van-icon size="50rpx" name="location-o" />
+                            <view class="text">收货地址</view>
+                        </view>
+                    </van-grid-item>
+                </view>
+                <navigator class="toAddr" open-type="navigate" url="/pages/opinion/opinion">
+                    <van-grid-item use-slot>
+                        <view class="feedback">
+                            <van-icon size="50rpx" name="records" />
+                            <view class="text">反馈</view>
+                        </view>
+                    </van-grid-item>
+                </navigator>
+                <navigator url="/pages/customerService/customerService" open-type="navigate">
+                    <van-grid-item use-slot>
+                        <view class="customer-service">
+                            <van-icon size="50rpx" name="service-o" />
+                            <view class="text">客服和帮助</view>
+                        </view>
+                    </van-grid-item>
+                </navigator>
+                <navigator url="/pages/invitePage/invitePage" open-type="navigate">
+                    <van-grid-item use-slot>
+                        <view class="prize">
+                            <van-icon size="50rpx" name="gift-o" />
+                            <view class="text">邀请有礼</view>
+                        </view>
+                    </van-grid-item>
+                </navigator>
+                <van-grid-item use-slot>
+                    <view class="setting" bind:tap="onSetting">
+                        <van-icon size="50rpx" name="setting-o" />
+                        <view class="text">设置</view>
+                    </view>
+                </van-grid-item>
+            </van-grid>
+        </view>
+    </view>
+</view>

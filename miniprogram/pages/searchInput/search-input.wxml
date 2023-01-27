@@ -1,0 +1,34 @@
+<view class="page">
+    <view class="search-line">
+        <view class="search-input">
+            <van-search model:value="{{ keyWords }}" input-align="center" shape="round" placeholder="请输入搜索关键词"
+                        action-text bind:cancel="onCancel" show-action="{{true}}" bind:search="onSearch"/>
+        </view>
+    </view>
+    <block wx:if="{{goodsList.length==0}}">
+        <view class="content">
+            <view class="title">历史搜索</view>
+            <view class="search-value">
+                <block wx:for="{{tagList}}" wx:key="index">
+                    <van-tag type="primary" closeable text-color="#555555" data-index="{{index}}" bind:close="onClose"
+                             wx:if="{{tagList[index]}}" color="#f7f8fa" size="large">
+                        <view class="value" bind:tap="chooseTag" data-value="{{tagList[index]}}">
+                            {{tagList[index]}}
+                        </view>
+                    </van-tag>
+                </block>
+            </view>
+            <view class="clear-value" bind:tap="clearAllTag">
+                <icon class="iconfont icon-lajitong"/>
+                <view class="text">清空历史记录</view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="goodsList">
+            <block wx:for="{{goodsList}}" wx:for-item="item" wx:key="_id">
+                <product-card data-index="{{index}}" goods="{{item}}" bindbuyNumChange="handleBuyNum"></product-card>
+            </block>
+        </view>
+    </block>
+</view>

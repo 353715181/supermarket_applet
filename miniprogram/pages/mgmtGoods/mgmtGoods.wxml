@@ -1,0 +1,32 @@
+<van-sticky>
+    <van-dropdown-menu active-color="#d45048" overlay>
+        <van-dropdown-item bind:change="clickOrderBy" model:value="{{ orderBy }}" options="{{ option1 }}"/>
+        <van-dropdown-item bind:change="clickCategory" model:value="{{ categoryValue }}" options="{{ categoryOption }}"/>
+        <van-dropdown-item id="item" title="{{ goodsName===''?'筛选':goodsName }}">
+            <van-cell-group border="{{ false }}">
+                <van-field
+                        model:value="{{ goodsName }}"
+                        placeholder="请输入商品名"
+                        border="{{ false }}"
+                        label="商品名称"
+                        clearable="{{true}}"
+                />
+            </van-cell-group>
+            <view style="padding: 5px 16px;">
+                <van-button type="danger" block round bind:click="onConfirm">
+                    确认
+                </van-button>
+            </view>
+        </van-dropdown-item>
+    </van-dropdown-menu>
+</van-sticky>
+<view style="height: 20rpx"></view>
+<van-grid column-num="2" border="{{ false }}" gutter="{{ 10 }}">
+    <van-grid-item use-slot wx:for="{{ goodsList }}" wx:for-item="item" wx:key="_id">
+        <mgmt-goods goods="{{item}}" bindbuyNumChange="handleBuyNum"></mgmt-goods>
+    </van-grid-item>
+</van-grid>
+
+<view bind:tap="toAddGoods" class="add_goods">
+    <van-icon class="add_icon" size="70rpx" color="#ffffff" name="plus"/>
+</view>

@@ -1,0 +1,44 @@
+.button_list {
+  display: flex;
+  justify-content: flex-end;
+}
+.van-button--primary {
+  margin-left: 20rpx;
+  border-color: #dedede;
+}
+.van-button--primary .van-button__text {
+  border-color: #dedede;
+  color: #333333;
+}
+.pay_order {
+  background: -webkit-linear-gradient(left, #06e411, #5db764);
+  width: 190rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  border-radius: 200rpx;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+.pay_order .text {
+  font-size: smaller;
+  color: #e8f7e8;
+}
+.pay_order .van-count-down {
+  display: flex;
+  align-items: center;
+  line-height: 60rpx;
+  color: #e8f7e8;
+}
+.pay_order .van-count-down .item {
+  display: inline-block;
+  width: 32px;
+  color: #e8f7e8;
+  font-size: 28rpx;
+  text-align: left;
+}
+.confirm_button {
+  margin: 20rpx 0;
+  height: 40px;
+  border-radius: 999px;
+}

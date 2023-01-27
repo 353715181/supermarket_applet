@@ -1,0 +1,15 @@
+.card{
+    margin-top: 30rpx;
+}
+.button_group{
+    height: 85rpx;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button{
+    margin-right: 20rpx;
+}
+

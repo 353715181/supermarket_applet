@@ -1,0 +1,33 @@
+<search-input style="position:fixed;top:52px;z-index:999;"></search-input>
+<van-sticky offset-top="{{ 52 }}">
+    <view class="product-list">
+        <scroll-view scroll-y="true" class="list-left">
+            <van-sidebar active-key="{{ activeKey }}" data-id="{{}}" bind:change="onChange">
+                <block wx:for="{{categoryList}}" wx:key="_id" wx:for-item="item">
+                    <van-sidebar-item title="{{item.categoryName}}"/>
+                </block>
+                <view style="height: 200rpx"></view>
+            </van-sidebar>
+        </scroll-view>
+        <scroll-view scroll-y="true" class="list-right" bindscrolltolower="lower">
+            <block wx:if="{{goodsList.length>0}}">
+                <block wx:for="{{goodsList}}" wx:key="_id" wx:for-item="item">
+                    <goods-card goods="{{item}}" bindbuyNumChange="handleBuyNum"></goods-card>
+                </block>
+                <view class="bottomContent" wx:if="{{!isNext}}">
+                    <van-divider contentPosition="center" textColor="#bcbcbc">
+                        到底了~亲~ 看看其他分类商品吧~
+                    </van-divider>
+                    <view style="height: 150rpx" >
+
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="no_goods">
+                    暂时没有商品
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</van-sticky>

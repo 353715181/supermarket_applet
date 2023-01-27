@@ -1,0 +1,6 @@
+.tab .van-tabs .van-tab .van-ellipsis {
+  color: #5fb068;
+}
+.tab .van-tabs .van-tabs__line {
+  background-color: #5fb068;
+}

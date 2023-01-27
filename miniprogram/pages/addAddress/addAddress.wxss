@@ -1,0 +1,10 @@
+.receive-info {
+  padding-top: 40rpx;
+}
+.receive-info van-field .van-field__label {
+  color: #323233;
+}
+.receive-info .button {
+  margin-top: 60rpx;
+  padding: 40rpx;
+}

@@ -1,0 +1,155 @@
+/* 轮播图 */
+.top {
+    background-color: #ffffff;
+}
+
+.detail-banner {
+    width: 100%;
+    height: 579rpx;
+    background: white;
+}
+
+.detail-banner-img {
+    width: 100%;
+    height: 100%;
+}
+
+.nums {
+    background-color: #929292;
+    border-radius: 30rpx;
+    position: relative;
+    width: 66rpx;
+    height: 40rpx;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -660rpx;
+    bottom: 66rpx;
+
+}
+
+.top_content {
+    position: relative;
+    top: -40rpx;
+    padding-left: 26rpx;
+}
+
+.nums .nums_text {
+    font-size: small;
+}
+
+
+
+.top_content .goods_name {
+    font-size: 40rpx;
+    letter-spacing: 2rpx;
+    font-weight: 600;
+    padding-top:20rpx;
+}
+
+.top_content .goods_price {
+    padding-top: 10rpx;
+    display: flex;
+}
+.top_content .goods_price .price {
+    font-size: 60rpx;
+    padding-top: 10rpx;
+    color: #ea392c;
+}
+
+.top_content .origin-price{
+    margin-left: 20rpx;
+    font-style:italic;
+    color:#6b6968;
+    text-decoration:line-through;
+    font-weight:600;
+    font-size: 12 rpx;
+    text-align: end;
+    position: relative;
+    bottom: -40rpx;
+}
+
+.center {
+    margin-top: 30rpx;
+    background-color: #ffffff;
+    padding-bottom: 20rpx;
+}
+
+.center .title {
+    padding-top: 30rpx;
+    padding-left: 30rpx;
+    font-size: 38rpx;
+    font-weight: 800;
+}
+
+.center .detail {
+    width: 90%;
+    margin: 30rpx auto;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+
+.center .detail .attribute_row {
+}
+
+.center .detail .key {
+    letter-spacing: 2rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #8f8f8f;
+    font-size: small;
+
+}
+
+.center .detail .value {
+    letter-spacing: 2rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #353535;
+    font-size: small;
+}
+
+.shopping_guide {
+    margin-top: 30rpx;
+    background-color: #ffffff;
+    padding: 30rpx;
+}
+
+
+.shopping_guide .guide_title {
+    font-weight: 800;
+}
+
+
+.guide_detail {
+
+}
+
+.guide_detail .guide_row {
+    margin: 20rpx 0;
+    letter-spacing: 2rpx;
+
+}
+
+.guide_detail .guide_row .guide_key {
+    margin-top: 8rpx;
+    font-size: 28rpx;
+    color: #232323;
+    font-weight: 400;
+
+}
+
+.guide_detail .guide_row .guide_value {
+    margin-top: 4rpx;
+    font-size: 26rpx;
+    color: #8f8f8f;
+    font-weight: 300;
+}
+
+.img_list {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,45 @@
+<!-- 从订单页进入 -->
+<view wx:if="{{false}}" class="add-address">
+    <view class="text">您还没有添加过收货地址哦</view>
+    <view class="button">
+        <van-button color="linear-gradient(to right, #67d261, #5db664)" round size="large" type="info" bind:click="onClick">
+            添加一个收货地址
+        </van-button>
+    </view>
+</view>
+<view wx:else class="show-address">
+    <view class="address-list">
+        <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <van-cell-group border="{{false}}">
+                <block wx:for="{{addressList}}" wx:for-item="item" wx:key="_id">
+                    <van-swipe-cell id="swipe-cell2" right-width="{{ 65 }}" name="{{item._id}}" async-close data-index="{{index}}" bind:close="onClose">
+                        <view class="address">
+                            <view class="address-info">
+                                <van-cell label="{{item.address}} {{item.roomNum}}" border="{{false}}" data-name="{{index}}" center bind:click="onClick">
+                                    <view class="address-radio" slot="icon" hidden="{{type==1?true:false}}">
+                                        <van-radio checked-color="#07c160" name="{{index}}" />
+                                    </view>
+                                    <view class="address-title" slot="title">
+                                        <view class="van-cell-text">
+                                            {{item.userName}}  {{item.userPhone}}
+                                        </view>
+                                        <van-tag wx:if="{{item.isMain}}" type="success">默认</van-tag>
+                                    </view>
+                                </van-cell>
+                            </view>
+                            <navigator class="edit-icon" url="/pages/editAddr/editAddr?id={{item._id}}&type={{type}}" open-type="navigate">
+                                <van-icon size="40rpx" name="edit" />
+                            </navigator>
+                        </view>
+                        <view slot="right" class="van-swipe-cell__right">删除</view>
+                    </van-swipe-cell>
+                </block>
+            </van-cell-group>
+        </van-radio-group>
+    </view>
+    <view class="button">
+        <van-button color="linear-gradient(to right, #67d261, #5db664)" round size="large" type="info" bind:click="onAdd">
+            添加一个收货地址
+        </van-button>
+    </view>
+</view>

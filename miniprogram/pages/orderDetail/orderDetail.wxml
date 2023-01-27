@@ -1,0 +1,37 @@
+<!-- <view class="order_state" >
+    <view class="state_text">{{order.stateName}}</view>
+
+</view> -->
+<view class="wait_pay">
+    <view class="tips">{{order.stateName}}</view>
+    <order-button  wx:if="{{order!=''}}" bind:onFinish="onFinish" bind:cancelOrder="cancelOrder" bind:updateOrderData="updateOrderData" bind:onDeleteOrder="onDeleteOrder" bind:addToCart="addToCart" order="{{order}}"></order-button>
+</view>
+<view class="receive_info">
+    <van-cell class="send_time " title="开始配送时间" value="{{order.sendTime}}" size="large" />
+    <van-cell class="addr_info" title="收货信息" value="{{order.receiveAddr}} {{order.receiveRoomNum}}" size="large" border="{{falses}}" />
+    <view class="user_info">{{order.receiveName}} {{order.receivePhone}}</view>
+    <view class="line"></view>
+    <van-field model:value="{{ order.outStock }}" disabled="{{true}}" label="如遇缺货" type="textarea" autosize border="{{ true }}" />
+
+    <van-field model:value="{{ order.remarks }}" disabled="{{true}}" label="备注" type="textarea" autosize border="{{ false }}" />
+</view>
+<view class="order_goods">
+    <van-cell-group class="order-list" wx:for="{{order.goodsList}}" wx:for-item="item" wx:key="_id" border="{{false}}">
+        <van-cell border="{{true}}" class="goods" icon="{{item.imgUrl}}" title="{{item.goodsName}}" size="large" label="单价:¥{{item.price}}/份    数量:{{item.buyNum}}份" center>
+            <text slot="right-icon">¥{{item.buyNum*item.price}}</text>
+        </van-cell>
+    </van-cell-group>
+    <view class="pay-money">
+        <van-cell border="{{false}}" title="商品金额" value="¥{{order.totalPrice}}" />
+        <van-cell border="{{false}}" title="配送费" value="¥{{order.deliverPrice}}" />
+        <van-cell class="free-price" border="{{false}}" title="减免金额" value="-¥{{order.freePrice}}" />
+        <van-cell border="{{false}}" title="应付金额" value="¥{{order.payPrice}}" />
+    </view>
+</view>
+<view class="order_info">
+    <van-cell border="{{false}}" title="订单编号" value="{{order.orderNo}}" />
+    <van-cell border="{{false}}" title="下单时间" value="{{order.createdTime}}" />
+    <van-cell border="{{false}}" title="支付方式" value="微信小程序" />
+</view>
+<view class='placeholder-view'></view>
+<van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a" show-cancel-button></van-dialog>

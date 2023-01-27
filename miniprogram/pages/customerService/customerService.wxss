@@ -1,0 +1,102 @@
+page {
+  background-color: #ffffff;
+  padding: 20rpx;
+  width: 93vw;
+}
+page .service_page .auto_service .title {
+  color: #464245;
+  font-weight: 500;
+  font-size: 40rpx;
+}
+page .service_page .auto_service .auto_button {
+  margin-top: 20rpx;
+  margin-left: 0;
+  width: 200rpx;
+  height: 166rpx;
+  display: flex;
+  flex-direction: column;
+}
+page .service_page .auto_service .auto_button .btnImg {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0;
+}
+page .service_page .auto_service .auto_button .text {
+  width: 100%;
+  height: 50rpx;
+  text-align: left;
+  font-size: small;
+  color: #4c484b;
+}
+page .question_list {
+  margin-top: 30rpx;
+}
+page .question_list .title {
+  color: #464245;
+  font-weight: 500;
+  font-size: 40rpx;
+}
+page .question_list .question {
+  margin-top: 20rpx;
+}
+page .question_list .question .van-collapse .van-cell--clickable {
+  padding-left: 0;
+  padding-right: 40rpx;
+  border-top: none;
+}
+page .question_list .question .van-collapse .van-collapse-item {
+  border-top: none;
+}
+page .question_list .question .van-collapse .van-collapse-item__content {
+  padding-left: 0;
+}
+page .line {
+  height: 300rpx;
+}
+page .button-area {
+  width: 720rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background-color: #ffffff;
+}
+page .button-area .onLine_service {
+  margin: 20rpx;
+}
+page .button-area .onLine_service .van-button {
+  border-radius: 30rpx;
+}
+page .button-area .service_phone {
+  height: 80rpx;
+  margin: 10rpx;
+  color: #73b36c;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .button-area .service_phone .icon {
+  width: 50rpx;
+  height: 50rpx;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+page .button-area .service_phone .icon .van-icon {
+  height: 40rpx;
+  top: 0;
+  position: relative;
+}
+page .button-area .service_phone .text {
+  position: relative;
+  height: 50rpx;
+  text-align: center;
+  font-size: small;
+  line-height: 50rpx;
+}
+page .button-area .tips {
+  font-size: small;
+  color: #b7b7b7;
+  text-align: center;
+  margin: 40rpx;
+}

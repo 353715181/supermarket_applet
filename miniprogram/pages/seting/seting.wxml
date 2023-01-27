@@ -1,0 +1,5 @@
+<view bind:tap="exit" class="exit">退出登陆</view>
+<van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a"
+            show-cancel-button></van-dialog>
+<view wx:if="{{isMgmt}}" bind:tap="toMgmtPage" class="login_mgmt">订单管理</view>
+<view wx:if="{{isMgmt&&level>5}}" bind:tap="toMgmtGoods" class="login_mgmt">商品管理</view>

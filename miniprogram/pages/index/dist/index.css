@@ -1,0 +1,25 @@
+.index_swiper {
+  padding: 0 28rpx;
+  background-color: #ffffff;
+}
+.index_swiper swiper {
+  width: 100%;
+  height: 340rpx;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.cat_grid {
+  background-color: #ffffff;
+  padding: 14rpx;
+}
+.cat_grid .van-grid {
+  height: 100%;
+  width: 100%;
+}
+.van-divider {
+  height: 18rpx;
+}
+.van-grid .van-grid-item .van-card {
+  background-color: #ffffff;
+}

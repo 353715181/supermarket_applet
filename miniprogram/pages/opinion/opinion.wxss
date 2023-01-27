@@ -1,0 +1,25 @@
+page {
+  background-color: #ffffff;
+  height: 1200rpx;
+}
+page .opinion_content {
+  padding: 20rpx;
+}
+page .opinion_content .text_length {
+  text-align: end;
+}
+page .van-uploader {
+  padding-left: 20rpx;
+}
+page .van-uploader .van-uploader__upload {
+  width: 100rpx;
+  height: 100rpx;
+}
+page .button .van-button {
+  margin: 0 aut;
+  width: 90%;
+  left: 5%;
+  text-align: center;
+  position: absolute;
+  bottom: 90rpx;
+}

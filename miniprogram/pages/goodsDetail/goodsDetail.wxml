@@ -1,0 +1,115 @@
+<view class="top">
+
+    <view style="padding:0" data-e="{{e}}">
+        <swiper class="detail-banner" wx:if="{{!videoSrc}}" current="{{current}}" circular="{{true}}"
+                indicator-dots="{{false}}" autoplay="{{autoplay}}" bindchange="swiperChange">
+            <view wx:for="{{picUrls}}" wx:key="index">
+                <swiper-item>
+                    <image bindtap="previewImage" src="{{item}}" data-src="{{item}}" data-index="{{index}}"
+                           style="width:100%;height:100%" mode='aspectFill'/>
+                </swiper-item>
+            </view>
+        </swiper>
+        <view class="nums">
+                <view class="nums_text">{{current+1}}/{{picUrls.length}}</view>
+        </view>
+    </view>
+    <view class="top_content">
+        <!--商品价格-->
+        <view class="goods_price">
+            <view class="price">¥{{price}}</view>
+            <view class="origin-price">
+                ¥{{goodsDetail.originPrice}}
+            </view>
+        </view>
+        <!--商品名称-->
+        <view class="goods_name">
+            <text>{{goodsDetail.goodsName}}</text>
+        </view>
+    </view>
+
+</view>
+<view class="center">
+    <view class="title">
+        商品信息
+    </view>
+    <view class="detail">
+        <block wx:for="{{goodsDetail.attribute}}" wx:key="index">
+            <van-row class="attribute_row">
+                <van-col span="5">
+                    <view class="key">
+                        {{item.name}}
+                    </view>
+                </van-col>
+                <van-col span="16">
+                    <view class="value">
+                        {{item.value}}
+                    </view>
+                </van-col>
+            </van-row>
+        </block>
+    </view>
+</view>
+<view class="img_list">
+    <block wx:key="index" wx:for="{{goodsDetail.detailInfo}}">
+        <image  src="{{item}}" style="width: 100vw"  mode="widthFix"></image>
+    </block>
+</view>
+<view class="shopping_guide">
+    <view class="guide_title">
+        购物指南
+    </view>
+    <view class="guide_detail">
+<!--        <block wx:for="{{goodsDetail.shoppingGuideList}}" wx:key="index">-->
+<!--            <view class="guide_row">-->
+<!--                <view class="guide_key">-->
+<!--                    {{item.title}}-->
+<!--                </view>-->
+<!--                <view class="guide_value">-->
+<!--                    {{item.content}}-->
+<!--                </view>-->
+<!--            </view>-->
+<!--        </block>-->
+        <view class="guide_row">
+            <view class="guide_key">
+                1.在线下单
+            </view>
+            <view class="guide_value">
+                次日达购买时间：00:00-21:30
+            </view>
+            <view class="guide_key">
+                2.物流配送
+            </view>
+            <view class="guide_value">
+                我们会根据您所购买商品的配送时间，配送到您订单的送货地址。
+            </view>
+            <view class="guide_key">
+                3.售后无忧
+            </view>
+            <view class="guide_value">
+                如果您购买的商品有任何问题，请直接与客服联系，客服将为您处理，让您售后无忧
+            </view>
+            <view class="guide_key">
+                4.价格说明
+            </view>
+            <view class="guide_value">
+                划线价格：指商超平台内经营者建议参考价，是平台内经营者参考线上商城/超市/门店价提供的价格，并非《禁止价格欺诈行为的规定》等法律法规中所指的"原价"，
+                仅供您购买时参考。
+            </view>
+            <view class="guide_value">
+                未划线价格：指商品在商超平台上的实时销售价格，您将据此决定是否最终购买。该价格可能会因促销活动、使用优惠券等发生变化，最终以结算页面价格为准。
+            </view>
+        </view>
+    </view>
+</view>
+
+<view style="height: 300rpx" ></view>
+<van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" open-type="contact" type="info" />
+    <van-goods-action-icon icon="cart-o" text="购物车" info="{{buyCount>0?buyCount:''}}"	 bind:click="toCartPage" />
+    <van-goods-action-button
+            text="加入购物车"
+            type="warning"
+            bind:click="onClickButton"
+    />
+</van-goods-action>

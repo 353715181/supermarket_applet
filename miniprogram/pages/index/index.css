@@ -1,0 +1,54 @@
+.index_swiper {
+  background-color: #ffffff;
+  margin-top: 110rpx;
+}
+.index_swiper swiper {
+  width: 100%;
+  height: 340rpx;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.cat_grid {
+  background-color: #ffffff;
+  padding: 14rpx;
+  border-radius: 30px;
+}
+.cat_grid .scroll-view .category_area {
+  height: 400rpx;
+  width: 800rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cat_grid .scroll-view .category_area .cagegory {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+}
+.cat_grid .scroll-view .category_area .cagegory .category_img {
+  text-align: center;
+}
+.cat_grid .scroll-view .category_area .cagegory .grid_text {
+  text-align: center;
+  color: #353535;
+  font-size: smaller;
+  font-weight: 600;
+}
+.icon_line {
+  height: 50rpx;
+  text-align: center;
+  font-size: smaller;
+  line-height: 50rpx;
+  color: #5caf63;
+}
+.icon_line .van-icon {
+  position: relative;
+  top: 6rpx;
+}
+.van-divider {
+  height: 18rpx;
+}
+.van-grid .van-grid-item .van-card {
+  background-color: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */

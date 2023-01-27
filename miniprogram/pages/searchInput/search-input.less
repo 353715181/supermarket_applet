@@ -1,0 +1,78 @@
+page {
+  background-color: #ffffff;
+
+  .search-line {
+    top        : 0;
+    display    : flex;
+    // position: absolute;
+
+    .search-input {
+      flex: 10;
+
+      .van-search {
+        position: fixed;
+        z-index : 100;
+        top     : 0;
+        width   : 750rpx;
+      }
+    }
+
+    .cancel {
+      text-align   : center;
+      display      : flex;
+      align-items  : center;
+      padding-right: 23rpx;
+      flex         : 1;
+      color        : #60646d;
+    }
+  }
+
+  .content {
+    padding   : 0 32rpx;
+    margin-top: 110rpx;
+
+    .title {
+      font-weight: bold;
+      padding    : 20rpx 0;
+      color      : #000000;
+    }
+
+    .search-value {
+      .van-tag {
+        background-color: #f7f8fa;
+        font-size       : 30rpx;
+        margin-right    : 30rpx;
+        margin-bottom   : 20rpx;
+      }
+
+      margin-bottom: 30rpx;
+    }
+
+    .clear-value {
+      height         : 60rpx;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      color          : #9a9a9a;
+
+      icon {}
+
+      .text {
+        position : relative;
+        top      : 4rpx;
+        font-size: smaller;
+      }
+    }
+  }
+
+  .goodsList {
+    margin-top        : 110rpx;
+    background-color: #f7f8fa;
+    height            : 100%;
+    width             : 100%;
+    padding           : 20rpx 0;
+
+    .product-card {}
+  }
+
+}

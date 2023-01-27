@@ -1,0 +1,24 @@
+<view class="detail">
+  <view class="title" data-id="{{order._id}}" bind:tap="getDetail">
+    <van-cell border="{{false}}" title="{{order.createdTime}}" value="{{order.stateName}}" />
+  </view>
+  <view class="content" data-id="{{order._id}}" bind:tap="getDetail">
+    <scroll-view class="scroll-view_H" scroll-x="true">
+      <block wx:for="{{order.goodsList}}" wx:for-item="g" wx:key="_id">
+        <view class="scroll-view-item_H">
+          <van-image lazy-load radius="10" width="160rpx" height="160rpx" fit="contain" src="{{g.imgUrl}}"></van-image>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="data">
+    <view class="num">共 {{order.goodsCount}} 份商品 实付</view>
+    <view class="price">¥{{order.payPrice}}</view>
+  </view>
+  <view class='line'></view>
+  <view class="button_list">
+    <order-button order="{{order}}"  bind:onFinish="onFinish" bind:updateOrderData="updateOrderData" bind:addToCart="addToCart" bind:cancelOrder="cancelOrder"  bind:onDeleteOrder="onDeleteOrder"></order-button>
+    <van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a" show-cancel-button></van-dialog>
+  </view>
+
+</view>

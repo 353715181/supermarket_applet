@@ -1,0 +1,7 @@
+.card {
+  width: 300rpx;
+  padding: 8rpx;
+}
+.card .card-image {
+  width: 100%;
+}

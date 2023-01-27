@@ -1,0 +1,53 @@
+<view class="submit-order">
+    <view class="address">
+        <van-cell class="address-info" wx:if="{{userInfo.address}}" title="{{userInfo.address}} {{userInfo.roomNum}}"
+                  size="large" label="{{userInfo.userName}}  {{userInfo.userPhone}}" is-link center
+                  url="/pages/address/address"/>
+        <van-cell wx:else title="选择收货地址" size="large" is-link center
+                  url="/pages/address/address?radio={{userInfo.index}}"/>
+    </view>
+    <view class="order">
+        <!-- 选择配送时间 -->
+        <van-cell title="配送时间" value="{{sendTime?sendTime:'请选择配送时间'}}" is-link border="{{false}}"
+                  bind:click="onSendTime"/>
+
+        <!-- 订单列表 -->
+        <van-cell-group class="order-list" wx:for="{{goodsList}}" wx:for-item="item" wx:key="_id">
+            <van-cell border="{{false}}" class="goods" icon="{{item.imgUrl}}" title="{{item.goodsName}}" size="large"
+                      label="单价:¥{{item.price}}/份    数量:{{item.buyNum}}份" center>
+                <text slot="right-icon">¥{{item.total}}</text>
+            </van-cell>
+        </van-cell-group>
+    </view>
+    <!-- 支付方式 -->
+    <view class="pay-way">
+        <van-cell border="{{false}}" title="支付方式" value="微信" center/>
+    </view>
+    <view class="remarks">
+        <!-- 如遇缺货 -->
+        <van-cell title="如遇缺货" value="{{outStock}}" is-link border="{{true}}"
+                  bind:click="handleOutStock"/>
+        <van-field model:value="{{ remarks }}" label="备注" type="textarea" placeholder="请告诉我们您其他的需求" autosize
+                   border="{{ false }}"/>
+    </view>
+    <view class="pay-money">
+        <van-cell border="{{false}}" title="商品金额" value="¥{{totalPrice}}"/>
+        <van-cell border="{{false}}" title="配送费" value="¥{{deliverPrice}}"/>
+        <van-cell class="free-price" border="{{false}}" title="减免金额" value="-¥{{freePrice}}"/>
+    </view>
+</view>
+<view class='placeholder-view'></view>
+
+<view class="submit-bar">
+    <van-submit-bar price="{{ (payPrice)*100 }}"  	 label="实付：" disabled="{{isDisabled}}"
+                    safe-area-inset-bottom button-text="提交订单" data-sumPrice="{{totalPrice-freePrice+deliverPrice}}"
+                    bind:submit="submitOrder"></van-submit-bar>
+</view>
+<van-popup show="{{ showPopup }}" position="bottom" custom-style="height: 40%;" safe-area-inset-bottom="{{true}}">
+    <van-picker columns="{{ columns }}" show-toolbar="{{true}}" bind:confirm="onConfirm" bind:cancel="onCancel"
+                confirm-button-text="确认" cancel-button-text="取消"/>
+</van-popup>
+<van-popup show="{{ showOutStock }}" position="bottom" custom-style="height: 40%;" safe-area-inset-bottom="{{true}}">
+    <van-picker columns="{{ OutStockList }}" show-toolbar="{{true}}" bind:confirm="chooseOutStock" bind:cancel="cancelOutStock"
+                confirm-button-text="确认" cancel-button-text="取消"/>
+</van-popup>

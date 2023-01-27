@@ -1,0 +1,13 @@
+<van-card thumb="{{goods.imgUrl}}"
+          origin-price="{{goods.originPrice?goods.originPrice:''}}" data-goodsId="{{goods.goodsId}}" bind:tap="toGoodsDetail" >
+    <view class="cart_title" slot="title"  >
+        {{ goods.inventory-0===0?goods.goodsName+'(已售完)':goods.goodsName }}
+    </view>
+    <view class="cart_price" slot="price"  >
+        ¥{{goods.price}}
+    </view>
+    <view slot="bottom" class="buy_button" catch:tap="handleBuyNum" data-goods="{{goods}}">
+        <van-icon class="icon" name="add-o" info="{{goods.buyNum===0?'':goods.buyNum}}" size="66rpx" color="green"/>
+    </view>
+</van-card>
+

@@ -1,0 +1,154 @@
+<view class="mgmt_button_list">
+    <!-- 0 取消
+    1 下单 待支付
+    2 支付成功，待商家接单
+    3 打包中
+    4 打包完成，待配送
+    5 配送中
+    6 订单已签收
+    7 售后（已经申请售后） -->
+
+    <block wx:if="{{order.state==2}}">
+        <view bind:tap="cancelMgmtOrder">
+            <button class="cancelButton" size="mini" color="#dedede" round type="warn">
+                取消订单
+            </button>
+        </view>
+        <view bind:tap="orderTaking">
+            <button size="mini" round type="primary">
+                接单
+            </button>
+        </view>
+    </block>
+    <block wx:if="{{order.state==3}}">
+        <view class="cancelButton"  bind:tap="cancelMgmtOrder">
+            <button size="mini" color="#dedede" round type="warn">
+                取消订单
+            </button>
+        </view>
+        <view bind:tap="sorting">
+            <button size="mini" color="#dedede" round type="primary">
+                打包完成
+            </button>
+        </view>
+    </block>
+    <block wx:if="{{order.state==4}}">
+        <view class="cancelButton"  bind:tap="cancelMgmtOrder">
+            <button size="mini" color="#dedede" round type="warn">
+                取消订单
+            </button>
+        </view>
+        <view bind:tap="startDelivery">
+            <button size="mini" color="#dedede" round type="primary">
+                开始配送
+            </button>
+        </view>
+    </block>
+    <block wx:if="{{order.state==5}}">
+        <view class="cancelButton"  bind:tap="cancelMgmtOrder">
+            <button size="mini" color="#dedede" round type="warn">
+                取消订单
+            </button>
+        </view>
+        <view bind:tap="finishDelivery" class="common_button">
+            <button size="mini" color="#dedede" round type="primary" bind:tap="applyService">
+                已送达
+            </button>
+        </view>
+    </block>
+    <block wx:if="{{order.state==7}}">
+        <view class="common_button">
+            <button size="mini" color="#dedede" round type="primary" bind:tap="queryApplyServiceInfo">
+                查看申请详情
+            </button>
+        </view>
+        <view class="common_button">
+            <button size="mini" color="#dedede" round type="warn" bind:tap="showHandle">
+                受理
+            </button>
+        </view>
+    </block>
+    <view class="common_button">
+        <button size="mini" plain round type="primary" bind:tap="onCall">
+            联系收货人
+        </button>
+    </view>
+    <van-popup show="{{ showServiceInfo }}" safe-area-inset-bottom="{{true}}" bind:close="onCloseServiceInfo">
+        <view class="card">
+            <van-cell title="申请时间" class="mgmt_cell_value" value="{{apply.createdTime}}"/>
+            <van-cell title="申请原因" class="mgmt_cell_value" value="{{apply.applyType}}"/>
+            <van-cell title="原因描述" border="{{false}}"/>
+            <view class="mgmt_opinion_content">
+                <textarea disabled="{{true}}" style="height:300rpx;width:100%" model:value="{{apply.applyRemarks}}"
+                          maxlength="{{100}}"
+                          placeholder-style="color:#c8c9cc;font-size:28rpx;font-weight:400"/>
+            </view>
+            <view class="mgmt_upload">
+                <!-- <van-cell title="上传图片" border="{{false}}" /> -->
+                <block wx:for="{{apply.imgList}}" wx:for-item="img" wx:key="index">
+                    <van-image width="110" fit="cover" height="110" bind:tap="clickImg" data-url="{{img.url}}" lazy-load
+                               src="{{img.url}}"/>
+                </block>
+            </view>
+        </view>
+    </van-popup>
+</view>
+<van-dialog
+        use-slot
+        title="处理售后"
+        show="{{ showHandle }}"
+        show-cancel-button
+        async-close
+        bind:confirm="confirmHandle"
+        class="dialog"
+        bind:beforeClose="beforeClose"
+        bind:close="onCloseDialog"
+        showConfirmButton="{{showConfirmButton}}"
+>
+    <view class="dialog_content">
+        <van-field
+                label="操作类型"
+                required
+                border="{{ false }}"
+                size="large"
+        />
+        <van-radio-group class="operateType" value="{{ operateType }}" bind:change="onChange">
+            <van-row>
+                <van-col span="8">
+                    <van-radio icon-size="35rpx" name="allRefund">全额退款</van-radio>
+                </van-col>
+                <van-col span="7">
+                    <van-radio icon-size="35rpx" name="partRefund">部分退款</van-radio>
+                </van-col>
+                <van-col span="8">
+                    <van-radio icon-size="35rpx" name="other">其他</van-radio>
+                </van-col>
+
+            </van-row>
+        </van-radio-group>
+        <van-field
+                wx:if="{{operateType==='partRefund'}}"
+                model:value="{{ partPrice }}"
+                type="digit"
+                label="退款金额"
+                placeholder="请输入退款金额"
+                required
+                border="{{ false }}"
+                size="large"
+                bind:change="onChangeParam"
+        />
+        <van-field
+                model:value="{{ remarks }}"
+                type="textarea"
+                label="备注"
+                placeholder="请记录处理结果"
+                autosize
+                required
+                border="{{ false }}"
+                size="large"
+                bind:change="onChangeParam"
+        />
+    </view>
+</van-dialog>
+<van-dialog id="van-dialog" confirm-button-text="确定" close-on-click-overlay="true" confirm-button-color="#6cc66a"
+            show-cancel-button></van-dialog>

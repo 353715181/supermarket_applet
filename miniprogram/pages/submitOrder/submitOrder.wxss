@@ -1,0 +1,49 @@
+page .submit-order {
+  margin-bottom: 200rpx;
+}
+page .submit-order .address .address-info .van-cell__title {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+page .submit-order .address .address-info .van-cell__label {
+  color: #323233;
+  font-weight: normal;
+}
+page .submit-order .order {
+  padding-top: 60rpx;
+}
+page .submit-order .order .van-cell__value {
+  color: #59ad61;
+  font-weight: 700;
+}
+page .submit-order .order .order-list .goods .van-cell__label {
+  padding-top: 20rpx;
+}
+page .submit-order .order .order-list .goods .van-icon {
+  height: 120rpx;
+  width: 120rpx;
+}
+page .submit-order .pay-way {
+  padding-top: 20rpx;
+}
+page .submit-order .pay-way .van-cell__value {
+  font-weight: bold;
+  color: #323233;
+  font-size: 30rpx;
+}
+page .submit-order .remarks {
+  padding: 20rpx 0;
+}
+page .submit-order .remarks .van-field__label {
+  color: #323233;
+}
+page .submit-order .pay-money .van-cell__value {
+  color: #323233;
+}
+page .submit-order .pay-money .free-price .van-cell__value {
+  color: #ec6c68;
+}
+page .placeholder-view {
+  width: 100%;
+  height: 150rpx;
+}

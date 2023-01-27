@@ -1,0 +1,259 @@
+.user-page {
+  padding: 20rpx;
+
+  .user {
+    height     : 200rpx;
+    width      : 100%;
+    display    : flex;
+    align-items: center;
+
+    .img {
+      display        : flex;
+      height         : 100rpx;
+      width          : 100rpx;
+      align-self     : center;
+      justify-content: center;
+
+      flex: 2;
+
+      .van-image {
+        background-color: #ffffff;
+      }
+    }
+
+    .user-info {
+      flex        : 7;
+      align-self  : center;
+      padding-left: 30rpx;
+
+      .user-name {
+        color         : #333333;
+        padding-top   : 10rpx;
+        padding-bottom: 10rpx;
+        
+      }
+
+      .user-phone {
+        position: relative;
+        bottom: -20rpx;
+        color      : #333333;
+        padding-top: 10rpx;
+        display    : flex;
+
+        .phone {
+          padding-left: 6rpx;
+          font-size   : small;
+        }
+      }
+
+
+    }
+
+
+    .login {
+      height     : 200rpx;
+      width      : 100%;
+      display    : flex;
+      align-items: center;
+
+      .default-heard-img {
+        display        : flex;
+        align-self     : center;
+        flex           : 2;
+        justify-content: center;
+
+        .van-image {
+
+          border: 2px solid #a1a1a1;
+        }
+      }
+
+      .login-text {
+        flex       : 7;
+        font-weight: 800;
+        font-size  : 50rpx;
+        color      : #333333;
+        margin-left: 40rpx;
+      }
+    }
+  }
+
+  .share_info{
+    background-color: #ffffff;
+    margin: 20rpx 0; 
+    border-radius   : 15px;
+    text-align: center;
+    height          : 120rpx;
+    .value{
+      margin-top: 20rpx;
+      font-size  : normal;
+    }
+    .title{
+      margin-top: 10rpx;
+      height: 20%;
+      color      : #333333;
+      font-size  : small;
+    }
+
+  }
+  .order {
+    border-radius   : 15px;
+    padding         : 20rpx;
+    background-color: #ffffff;
+    height          : 200rpx;
+
+    .myOrder {
+      display        : flex;
+      justify-content: space-between;
+
+      .title {
+        color      : #333333;
+        font-weight: bold;
+      }
+
+      .all-order {
+        display    : flex;
+        align-items: center;
+        color      : #cfcfcf;
+        font-size  : small;
+
+        .van-icon {}
+      }
+    }
+
+    .order-state {
+      display        : flex;
+      padding-top    : 40rpx;
+      justify-content: space-around;
+
+      .to-be-paid {
+        flex      : 3.33;
+        text-align: center;
+
+        .van-icon {}
+      }
+
+      .goods-to-be-receive {
+        flex      : 3.33;
+        text-align: center;
+
+        .van-icon {}
+      }
+
+      .refundment {
+        flex      : 3.33;
+        text-align: center;
+
+        .van-icon {}
+      }
+
+      .text {
+        color    : #555555;
+        font-size: small;
+      }
+
+
+
+      .wait_pay_num{
+        background-color: #e85d58;
+        height: 36rpx;
+        width: 36rpx;
+        border-radius: 30rpx;
+        font-size: small;
+        color: #ffffff;
+        justify-content: center;
+        position: relative;
+        bottom:  108rpx;
+        left:  120rpx;
+        z-index: 100;
+      }
+
+      .wait_receive{
+        background-color: #e85d58;
+        height: 36rpx;
+        width: 36rpx;
+        border-radius: 30rpx;
+        font-size: small;
+        color: #ffffff;
+        justify-content: center;
+        position: relative;
+        bottom:  108rpx;
+        left:  120rpx;
+        z-index: 100;
+      }
+    }
+  }
+
+  .service-context {
+    margin-top      : 30rpx;
+    border-radius   : 15px;
+    padding         : 20rpx;
+    background-color: #ffffff;
+    height          : 360rpx;
+
+    .my-service {
+      display        : flex;
+      justify-content: space-between;
+      color          : #333333;
+      font-weight    : bold;
+    }
+
+    .service-items {
+
+      .address {
+        text-align: center;
+
+        .van-icon {}
+
+        .text {
+          color    : #555555;
+          font-size: small;
+        }
+      }
+
+      .feedback {
+        text-align: center;
+
+        .van-icon {}
+
+        .text {
+          color    : #555555;
+          font-size: small;
+        }
+      }
+
+      .customer-service {
+        text-align: center;
+
+        .van-icon {}
+
+        .text {
+          color    : #555555;
+          font-size: small;
+        }
+      }
+
+      .prize {
+        text-align: center;
+
+        .van-icon {}
+
+        .text {
+          color    : #ea392c;
+          font-size: small;
+        }
+      }
+
+      .setting {
+
+        .van-icon {}
+
+        .text {
+          color    : #555555;
+          font-size: small;
+        }
+      }
+    }
+  }
+
+}

@@ -3,13 +3,14 @@
     <view class="user">
         <block wx:if="{{isLogin}}">
             <view class="img">
-                <van-image height="150rpx" width="150rpx" round src="cloud://test-9gk2a9v0ee0aa199.7465-test-9gk2a9v0ee0aa199-1304152447/suguoxiansheng.png" />
+                <van-image height="150rpx" width="150rpx" round src="https://7465-test-1grlfkhpfaea9d5d-1304152447.tcb.qcloud.la/logo.jpg?sign=a58a68fabd82bc117b8b29f6066c4295&t=1676110894" />
             </view>
             <view class="user-info">
                 <view class="user-name">蔬果_{{userName}}</view>
                 <view class="user-phone">
                     <van-icon name="phone-o" size="30rpx" />
-                    <view class="phone">{{userPhone}}</view>
+                    <!-- <view class="phone">{{userPhone}}</view> -->
+                    <view class="phone">******</view>
                 </view>
             </view>
         </block>

@@ -95,13 +95,25 @@ Page({
         if (token && token.phone) {
             const result = await queryMgmt(token.phone)
             console.log("查询管理员信息结果->", result)
-            if (result.length > 0) {
-                wx.setStorageSync("mgmt", result[0]);
-                this.setData({
-                    isMgmt: true,
-                    level: result[0].level
-                })
-            }
+            // 方便演示 放开后门
+
+            wx.setStorageSync("mgmt", result[0]);
+            this.setData({
+              isMgmt: true,
+              level: 7
+          })
+            // 需要校验可以把 100-104 行代码删除 打开下面代码的注解
+            // this.setData({
+            //   isMgmt: true,
+            //   level: result[0].level
+            // })
+            // if (result.length > 0) {
+            //     wx.setStorageSync("mgmt", result[0]);
+            //     this.setData({
+            //         isMgmt: true,
+            //         level: result[0].level
+            //     })
+            // }
         }
     },
 

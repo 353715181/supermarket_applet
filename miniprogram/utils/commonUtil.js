@@ -201,18 +201,20 @@ export const toPayPage = async (orderNo, attach, payPrice) => {
     wx.hideLoading();
     console.log("toPayPage payResult", payResult)
     return new Promise((resolve, reject) => {
-        const payment = payResult.result.payment
-        wx.requestPayment({
-            ...payment,
-            async success(res) {
-                console.log('pay success', res)
-                resolve(true)
-            },
-            fail(res) {
-                console.error('pay fail', res)
-                reject(false)
-            }
-        })
+      resolve(true)
+      // TODO 方便演示 以下支付代码注解需要的可以打开
+        // const payment = payResult.result.payment
+        // wx.requestPayment({
+        //     ...payment,
+        //     async success(res) {
+        //         console.log('pay success', res)
+        //         resolve(true)
+        //     },
+        //     fail(res) {
+        //         console.error('pay fail', res)
+        //         reject(false)
+        //     }
+        // })
     })
 
 }

@@ -263,7 +263,7 @@ Page({
         // 日期
         var today = date.getDate();
         let columns = [];
-        // 当天所在数据库的索引
+        // 当天所在数据库的索引(没记错的话这里周天是0)
         var index = timeList.findIndex(v => v.day === d);
         console.log("当天所在的索引", index, timeList[index].day, d)
         // 获取3个可选的配送时间
